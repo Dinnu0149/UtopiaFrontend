@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/UtopiaFrontend/static/css/main.7ae86d24.css",
+    "main.js": "/UtopiaFrontend/static/js/main.c9bf9773.js",
+    "static/media/none_available.png": "/UtopiaFrontend/static/media/none_available.e60fa22d328e12f6ad15.png",
+    "static/media/banner-02.png": "/UtopiaFrontend/static/media/banner-02.19caad1f29b02a36f0f8.png",
+    "static/media/event.png": "/UtopiaFrontend/static/media/event.eee63df00a50e189bf1c.png",
+    "static/media/transaction.png": "/UtopiaFrontend/static/media/transaction.22e148b1b88010cd290a.png",
+    "static/media/profile-cover.jpg": "/UtopiaFrontend/static/media/profile-cover.d8b85219a1f1b5e762ac.jpg",
+    "static/media/orgainzation.png": "/UtopiaFrontend/static/media/orgainzation.1e6f8b367b12d1a75366.png",
+    "static/media/pending.png": "/UtopiaFrontend/static/media/pending.963aecbced15b95bf5d1.png",
+    "static/media/404.png": "/UtopiaFrontend/static/media/404.c5917618b48b98bbdfa6.png",
+    "static/media/booking.png": "/UtopiaFrontend/static/media/booking.29f874ec744301d905ec.png",
+    "static/media/user.png": "/UtopiaFrontend/static/media/user.38b097360cd1024e4462.png",
+    "static/media/notVerified.png": "/UtopiaFrontend/static/media/notVerified.664a615eca44cc613fe3.png",
+    "static/media/followers.png": "/UtopiaFrontend/static/media/followers.5782ec3567fdd5031875.png",
+    "static/media/upcoming.png": "/UtopiaFrontend/static/media/upcoming.36863c800b2219b9bde5.png",
+    "static/media/notification.png": "/UtopiaFrontend/static/media/notification.0a0ea58c6012350903c6.png",
+    "static/media/favorites.png": "/UtopiaFrontend/static/media/favorites.b70a0bf46fee9fd57259.png",
+    "static/media/verified.png": "/UtopiaFrontend/static/media/verified.91c8eb11861ee0a33a86.png",
+    "static/media/appLogo.png": "/UtopiaFrontend/static/media/appLogo.503bd05070ed0d611397.png",
+    "static/media/criditchip.png": "/UtopiaFrontend/static/media/criditchip.5de8e642556d623c6488.png",
+    "static/media/ticketCover.jpg": "/UtopiaFrontend/static/media/ticketCover.ff2359e2adfaa8f0d667.jpg",
+    "static/media/male.jpg": "/UtopiaFrontend/static/media/male.f578bbe80f35a9ec99fe.jpg",
+    "index.html": "/UtopiaFrontend/index.html",
+    "main.7ae86d24.css.map": "/UtopiaFrontend/static/css/main.7ae86d24.css.map",
+    "main.c9bf9773.js.map": "/UtopiaFrontend/static/js/main.c9bf9773.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ae86d24.css",
+    "static/js/main.c9bf9773.js"
+  ]
+}
