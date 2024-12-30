@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/UtopiaFrontend/static/css/main.7ae86d24.css",
-    "main.js": "/UtopiaFrontend/static/js/main.70c7d9ed.js",
+    "main.js": "/UtopiaFrontend/static/js/main.8f204ec9.js",
     "static/media/none_available.png": "/UtopiaFrontend/static/media/none_available.e60fa22d328e12f6ad15.png",
     "static/media/banner-02.png": "/UtopiaFrontend/static/media/banner-02.19caad1f29b02a36f0f8.png",
     "static/media/event.png": "/UtopiaFrontend/static/media/event.eee63df00a50e189bf1c.png",
@@ -24,10 +24,10 @@
     "static/media/male.jpg": "/UtopiaFrontend/static/media/male.f578bbe80f35a9ec99fe.jpg",
     "index.html": "/UtopiaFrontend/index.html",
     "main.7ae86d24.css.map": "/UtopiaFrontend/static/css/main.7ae86d24.css.map",
-    "main.70c7d9ed.js.map": "/UtopiaFrontend/static/js/main.70c7d9ed.js.map"
+    "main.8f204ec9.js.map": "/UtopiaFrontend/static/js/main.8f204ec9.js.map"
   },
   "entrypoints": [
     "static/css/main.7ae86d24.css",
-    "static/js/main.70c7d9ed.js"
+    "static/js/main.8f204ec9.js"
   ]
 }
