@@ -1,0 +1,656 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.infoMainCardRow {
+  .infoCards {
+    border-radius: 30px;
+
+    ul {
+      li {
+        color: var(--secondary-color);
+        background-color: transparent;
+      }
+    }
+    .profileBackgroundPic {
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+    .userPic {
+      min-width: 100px;
+      max-width: 100px;
+      min-height: 100px;
+      max-height: 100px;
+      margin-top: -55px;
+      border: 5px solid white;
+    }
+  }
+
+  .detailSeeMore {
+    color: var(--secondary-color);
+    font-size: 25px;
+
+    i {
+      transform: rotate(-45deg);
+      padding: 6px;
+      border-radius: 50%;
+      background-color: var(--secondary-color);
+      transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
+      color: var(--light-color);
+    }
+
+    &:hover {
+      color: var(--primary-color);
+      i {
+        transform: rotate(0deg);
+        color: var(--secondary-color);
+        background-color: transparent;
+        text-decoration: underline;
+        transition: transform 0.4s ease-in-out,
+          background-color 0.4s ease-in-out;
+      }
+    }
+  }
+}
+
+.ticketMainRow {
+  .infoCards {
+    &.focused {
+      outline: 2px solid $primary-color !important;
+    }
+  }
+  p {
+    margin: 0;
+    padding: 2px;
+    color: var(--fading-color);
+  }
+  h4 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+  h6 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  hr {
+    border: 2px dashed;
+  }
+}
+
+.schduleCard {
+  .schduleCardColDate {
+    background-color: var(--light-gray);
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    border-right: 3px solid $fading-color2;
+
+    h5 {
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+    }
+    p {
+      font-weight: 600;
+    }
+    @media (max-width: 767px) {
+      h5 {
+        font-size: 15px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.infoCountDown {
+  h5 {
+    color: var(--secondary-color);
+    font-style: oblique;
+    font-weight: 600;
+  }
+  h6 {
+    color: var(--secondary-color);
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 600;
+    font-size: 30px;
+  }
+}
+
+.speckerRowWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+
+  .speackerCard {
+    img {
+      border-radius: 50px;
+    }
+    .overlayShadow {
+      border-radius: 50px;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transition: height 0.4 ease-in-out;
+    }
+
+    .speakerTextOverLay {
+      transform: translateY(50%);
+      transition: transform 0.6s ease-in-out;
+
+      h6 {
+        font-weight: 300;
+        padding-left: 2px;
+      }
+
+      h5 {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      .overlayShadow {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .speakerTextOverLay {
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 0.6s ease-in-out;
+
+        h6 {
+          color: $light-color !important;
+        }
+        h5 {
+          opacity: 1;
+          color: $light-color !important;
+        }
+      }
+    }
+  }
+}
+
+.reviewRowWrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+}
+
+.profileNavBottom {
+  border-bottom: 1px solid $secondary-color;
+  .profileNavBottomItem {
+    a {
+      border: none;
+      color: var(--secondary-color) !important;
+
+      &:hover {
+        border-bottom: 1px solid $primary-color;
+        color: var(--primary-color) !important;
+      }
+    }
+  }
+}
+
+.specker-row {
+  table {
+    thead {
+      tr {
+        th {
+          font-family: $font_family;
+          color: var(--secondary-color);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          font-family: $font_family;
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}
+
+.previewLunchBtn {
+  background-color: var(--primary-color);
+  color: var(--light-color);
+}
+
+.event-card {
+  border: none;
+  background-color: var(--light-color);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+
+  .organizerImg {
+    min-height: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+  }
+
+  .event-image-container {
+    cursor: pointer;
+
+    .event-image {
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: $primary-blue-color;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 12px;
+      color: $primary-color;
+    }
+
+    .favorite {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: $primary-blue-color;
+      padding: 5px;
+      font-size: 18px;
+      cursor: pointer;
+
+      i {
+        color: var(--attractive-color);
+      }
+    }
+  }
+
+  .eventTitle {
+    color: var(--secondary-color);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: $big_font_weight;
+  }
+
+  i {
+    color: var(--primary-color);
+  }
+
+  span {
+    color: var(--secondary-color);
+  }
+
+  .fee {
+    color: var(--primary-color);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: $font_size;
+    font-weight: $big_font_weight;
+  }
+}
+
+.event-modal {
+  .category-tag {
+    background-color: $primary-blue-color;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: $primary-color;
+  }
+
+  .like-button {
+    background-color: $primary-blue-color;
+    border-radius: 50%;
+
+    i {
+      color: $primary-color;
+      font-size: 20px;
+
+      &.active {
+        color: $attractive-color !important;
+      }
+    }
+  }
+
+  .share-button {
+    background-color: $primary-blue-color;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+
+    i {
+      color: $primary-color;
+      font-size: 20px;
+      transition: color 0.4s ease-in-out;
+    }
+
+    &.open {
+      background-color: $primary-color;
+      transition: background-color 0.4s ease-in-out;
+
+      i {
+        color: $primary-blue-color;
+        transition: color 0.4s ease-in-out;
+      }
+    }
+  }
+
+  .model-nav-tabs-body {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    .nav-tabs {
+      max-width: 100%;
+      overflow: scroll;
+
+      a {
+        flex: 1;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid $light-gray;
+        color: $secondary-color;
+        font-size: 14px;
+
+        &:hover {
+          color: $primary-color !important;
+        }
+      }
+    }
+
+    .nav-tabs-content {
+      .profileImg {
+        min-height: 50px;
+        max-height: 50px;
+        min-width: 50px;
+        max-width: 50px;
+      }
+      i {
+        color: $primary-color;
+      }
+      span {
+        color: var(--secondary-color);
+      }
+      h5 {
+        color: var(--secondary-color);
+        font-size: 17px;
+      }
+
+      p {
+        &:hover {
+          font-size: $small_font_size;
+        }
+      }
+      .organizerInfo {
+        i {
+          background-color: $light-gray;
+        }
+      }
+    }
+  }
+
+  .footer {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    button {
+      background-color: $primary-color !important;
+      color: $light-color !important;
+    }
+  }
+
+  .fee {
+    color: $primary-color;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: $font_size;
+    font-weight: $big_font_weight;
+  }
+}
+
+.searchIcon,
+.locationIcon {
+  button {
+    background-color: $primary-color !important;
+    i {
+      color: $primary-blue-color;
+    }
+    &.useMyLocation {
+      background-color: $success-color !important;
+      i {
+        color: $light-gray;
+      }
+    }
+  }
+}
+
+.scrollCategoryContainer {
+  max-width: 768px;
+  margin: auto;
+
+  .seletedItems {
+    background-color: #b3b8e0;
+    color: $primary-color;
+  }
+
+  .category-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    cursor: grab;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #f97316;
+        border-radius: 10px;
+      }
+    }
+
+    .flex-nowrap {
+      display: flex;
+      flex-wrap: nowrap;
+
+      .category-icon {
+        cursor: pointer;
+        background-color: #b3b8e0;
+        padding: 10px;
+        display: inline-block;
+        border: 0;
+        transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out;
+
+        &.active {
+          box-shadow: 0px 0px 10px 1px $primary-color;
+          border: 1px solid $primary-color;
+          transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out;
+        }
+
+        span {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+.nearbyEvent {
+  .nearbyEventImageContainer {
+    .eventImageBody {
+      cursor: pointer;
+
+      .favorite {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $primary-blue-color !important;
+        padding: 5px;
+        font-size: 15px;
+        cursor: pointer;
+
+        i {
+          color: var(--attractive-color);
+        }
+      }
+
+      img {
+        min-height: 100px;
+        max-height: 100px;
+        min-width: 100px;
+        width: 300px;
+      }
+    }
+  }
+
+  .nearbyEventInfo {
+    .badge {
+      background-color: $primary-blue-color;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 12px;
+      color: $primary-color;
+    }
+    .eventTitle {
+      color: $secondary-color;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-size: 15px;
+      font-weight: $big_font_weight;
+    }
+    i {
+      font-size: 12px;
+      color: $primary-color;
+    }
+    span {
+      font-size: 13px;
+    }
+    .fee {
+      font-size: 14px;
+      color: $primary-color;
+    }
+  }
+}
+
+.bookedEvent {
+  .badge {
+    background-color: $primary-blue-color;
+    padding: 5px 10px;
+    font-size: 12px;
+    color: $primary-color;
+  }
+  .bookedEventImageContainer {
+    .eventImageBody {
+      cursor: pointer;
+
+      .bookedImage {
+        height: 120px;
+        width: 100%;
+      }
+    }
+  }
+
+  .nearbyEventInfo {
+    .eventTitle {
+      color: $secondary-color;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-size: 15px;
+      font-weight: $big_font_weight;
+    }
+    i {
+      font-size: 12px;
+      color: $primary-color;
+    }
+    span {
+      font-size: 13px;
+    }
+    .fee {
+      font-size: 15px;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.favoriteEvent {
+  .favoriteEventImageContainer {
+    .eventImageBody {
+      cursor: pointer;
+
+      .favoriteImage {
+        min-height: 100px;
+        max-height: 100px;
+        width: 100%;
+      }
+
+      .favorite {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: $primary-blue-color !important;
+        padding: 5px;
+        font-size: 15px;
+        cursor: pointer;
+
+        i {
+          color: var(--attractive-color);
+        }
+      }
+    }
+  }
+
+  .nearbyEventInfo {
+    .badge {
+      background-color: $primary-blue-color;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 12px;
+      color: $primary-color;
+    }
+    .eventTitle {
+      color: $secondary-color;
+      font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+      font-size: 15px;
+      font-weight: $big_font_weight;
+    }
+    i {
+      font-size: 12px;
+      color: $primary-color;
+    }
+    span {
+      font-size: 13px;
+    }
+    .fee {
+      font-size: 15px;
+      color: var(--primary-color);
+    }
+  }
+}
+
+.sideDisplayContainer {
+  background-color: var(--light-gray);
+  position: relative;
+
+  .imgCol {
+    .eventImage {
+      min-height: 180px;
+      max-height: 180px;
+      width: 100%;
+    }
+    .header {
+      color: var(--app-primary-color) !important;
+    }
+    .displayCaption {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      bottom: 0;
+    }
+    .organizerImg {
+      min-height: 50px;
+      max-height: 50px;
+      min-width: 50px;
+      max-width: 50px;
+    }
+  }
+}

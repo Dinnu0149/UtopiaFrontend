@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/main';
+
+.scrollButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: var(--app-primary-color) !important;
+    i {
+        font-size: 15px;
+        color: $light-color !important;
+    }
+}
+
+.horizonScrollButton {
+    background-color: var(--app-primary-color) !important;
+    svg {
+        color: $light-color !important;
+    }
+}

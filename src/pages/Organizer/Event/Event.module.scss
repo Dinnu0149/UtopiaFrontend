@@ -1,0 +1,158 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+@import "../../../styles/main";
+
+.eventCard {
+  .eventCardBody {
+    background-position: center;
+    background-size: cover;
+  }
+  small {
+    color: var(--secondary-color);
+    font-family: $font_family;
+  }
+}
+
+.detailSeeMore {
+  color: var(--secondary-color);
+  font-size: 25px;
+
+  i {
+    transform: rotate(-45deg);
+    padding: 6px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out, text-decoration 0.4s ease-in-out;
+    color: var(--light-color);
+  }
+
+  &:hover {
+    color: var(--primary-color);
+    i {
+      transform: rotate(0deg);
+      text-decoration: underline;
+      color: var(--secondary-color);
+      background-color: transparent;
+      transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out, text-decoration 0.4s ease-in-out;
+    }
+  }
+}
+
+hr.pageDivider {
+  border: 0;
+  clear: both;
+  display: block;
+  margin: 2.4rem auto;
+  text-align: center;
+  width: 100%;
+
+  background-color: transparent;
+  height: 3px;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-name: progress;
+    background: blue;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    width: 80px;
+  }
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(1440px);
+  }
+}
+
+.aboutInfoCard {
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+}
+
+.reviewEventinfo {
+
+  i{
+    font-size: 12px;
+    color: var(--primary-color);
+  }
+  span {
+    font-size: 13px;
+  }
+
+  .badge {
+    background-color: var(--primary-blue-color);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    color: var(--primary-color);
+  }
+
+  .eventTitle {
+    color: var(--secondary-color);
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: $big_font_weight;
+  }
+  .location {
+    color: var(--secondary-color);
+  }
+}
+
+.reviewBookinginfo {
+  h6 {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+    &:hover {
+      font-size: inherit;
+    }
+  }
+
+    i {
+      color: var(--primary-color);
+    }
+    span {
+      color: var(--secondary-color);
+    }
+    
+    hr {
+      border: 2px dashed;
+    }
+
+}
+
+.upcoming-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #f97316;
+      border-radius: 10px;
+    }
+  }
+
+  .flex-nowrap {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+}
+

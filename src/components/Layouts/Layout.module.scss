@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+@import '../../styles/main';
+
+
+.app-container {
+    // display: flex;
+
+    .main-content {
+        flex-grow: 1;
+        transition: margin-left 0.4s ease-in-out;
+
+        @media (max-width: 767px) {
+          transition: margin-left 0.4s ease-in-out;
+        }
+
+        &.sidebar-open {
+          margin-left: 20%;
+          transition: margin-left 0.4s ease-in-out;
+
+          @media (max-width: 767px) {
+            margin-left: 50%;
+            transition: margin-left 0.4s ease-in-out, filter 0.3s ease-in-out;
+
+            .pagesWrapper{
+              background: rgba(0, 0, 0, 0.5);
+              filter: blur(8px);
+              transition: filter 0.3s ease-in-out;
+            }
+          }
+        }
+    
+      }
+    }

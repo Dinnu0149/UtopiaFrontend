@@ -1,0 +1,31 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.favorite {
+  align-items: center;
+  align-content: center;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: $primary-blue-color;
+  border-radius: 50%;
+  cursor: pointer;
+
+  i {
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 20px;
+
+    &.is_favorite {
+      color: var(--attractive-color) !important;
+    }
+  }
+
+  &.clicked {
+    i {
+      transform: scale(1.5);
+      color: var(--attractive-color) !important;
+      text-align: center;
+    }
+  }
+}

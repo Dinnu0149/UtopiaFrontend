@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.creditCard {
+  background: linear-gradient(to top, #032b44, #87ceeb);
+  border-radius: 30px;
+}
+
+.revenue-row {
+  .actionWrapper {
+    cursor: pointer;
+    color: $primary-color;
+  }
+}

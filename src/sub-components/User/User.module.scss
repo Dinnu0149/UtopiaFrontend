@@ -1,0 +1,149 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.profileNavCard {
+  .profileNavUserImage {
+    margin-top: -55px;
+    border: 5px solid white;
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .profileNavBottom {
+    .profileNavBottomItem {
+      a {
+        border: none;
+        color: var(--secondary-color) !important;
+
+        &:hover {
+          border-top: 1px solid $primary-color;
+          color: var(--primary-color) !important;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-card-row {
+  .dashboard-header-Intro {
+    margin-top: 50px;
+    h4 {
+      color: var(--light-color);
+    }
+    button {
+      color: var(--dark-color) !important;
+
+      &:hover {
+        border: 1px solid $light-color;
+        color: var(--light-color) !important;
+      }
+    }
+  }
+
+  .dashboard-header-card {
+    i {
+      background-color: var(--background-color);
+      color: $primary-color;
+    }
+  }
+}
+.organization-nav-tabs-body {
+  .profilePicture {
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+  }
+}
+
+.organization-background-card {
+  .backgroundCover {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+  .profilePicture {
+    margin-top: -135px;
+    border: 5px solid white;
+    min-height: 100px;
+    max-height: 100px;
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .followButton {
+    background-color: $primary-blue-color;
+    padding: 5px;
+    border-radius: 12px;
+    color: $primary-color;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 1px $primary-color;
+      border: 1px solid $primary-color;
+      transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out;
+    }
+  }
+}
+
+.organization-nav-tabs-body {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+
+  .nav-tabs {
+    max-width: 100%;
+    overflow: scroll;
+
+    a {
+      flex: 1;
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid $light-gray;
+      color: $secondary-color;
+      font-size: 14px;
+
+      &:hover {
+        color: $primary-color !important;
+      }
+    }
+  }
+
+  .nav-tabs-content {
+    i {
+      color: $primary-color;
+    }
+    span {
+      color: var(--secondary-color);
+    }
+    h5 {
+      color: var(--secondary-color);
+      font-size: 17px;
+    }
+
+    p {
+      &:hover {
+        font-size: $small_font_size;
+      }
+    }
+    .organizerInfo {
+      i {
+        background-color: $light-gray;
+      }
+    }
+  }
+}
+
+.bookingTableRow {
+  table {
+    img {
+      min-height: 40px;
+      max-height: 40px;
+      min-width: 40px;
+      max-width: 40px;
+    }
+  }
+}

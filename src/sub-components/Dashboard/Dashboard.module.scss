@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.dashboard-headerBg {
+  background-color: var(--app-primary-color);
+  height: 200px;
+
+}
+  .dashboard-card-row {
+    
+    .dashboard-header-Intro {
+      margin-top: 50px;
+      
+      h5 {
+        color: var(--light-color) !important;
+      }
+      button {
+        color: var(--dark-color) !important;
+
+        &:hover {
+          border: 1px solid var(--light-color);
+          color: var(--light-color) !important;
+        }
+      }
+    }
+
+    .dashboard-header-card {
+      i {
+        background-color: var(--background-color);
+        color: $primary-color;
+      }
+    }
+  }
+
+.active-event-row {
+
+  table {
+    thead {
+      tr {
+        th {
+          font-family: $font_family;
+          color: var(--secondary-color);
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          font-family: $font_family;
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+}

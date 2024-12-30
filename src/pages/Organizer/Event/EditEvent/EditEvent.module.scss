@@ -1,0 +1,10 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+@import "../../../../styles/main";
+
+.ticketEditCard {
+    h5 {
+        font-weight: 600;
+        color: var(--secondary-color);
+    }
+}

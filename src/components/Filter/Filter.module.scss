@@ -1,0 +1,13 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.filterRow {
+  input[type="text"] {
+    border-radius: 20px !important;
+  }
+
+  select {
+    border-radius: 20px !important;
+  }
+}

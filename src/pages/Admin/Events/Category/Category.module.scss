@@ -1,0 +1,22 @@
+@import "../../../../styles/variables";
+@import "../../../../styles/mixins";
+@import "../../../../styles/main";
+
+.category-icon {
+  cursor: pointer;
+  background-color: $primary-blue-color;
+  padding: 10px;
+  display: inline-block;
+  border: 0;
+  transition: box-shadow 0.4s ease-in-out, border 0.4s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 0px 10px 1px $primary-color;
+    border: 1px solid $primary-color;
+    transition: box-shadow 0.4s ease-in-out;
+  }
+
+  span {
+    font-size: 20px;
+  }
+}

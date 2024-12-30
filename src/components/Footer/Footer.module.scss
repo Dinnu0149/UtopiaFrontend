@@ -1,0 +1,20 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.footer {
+  background-color: var(--light-gray);
+  padding: 10px 0;
+  border-top: 1px solid #e7e7e7;
+
+  .text-start {
+    font-size: $small_font_size;
+    color: var(--danger-color);
+    font-family: $font_family;
+    font-weight: $font_weight;
+  }
+
+  .text-end {
+    @extend .text-start;
+  }
+}

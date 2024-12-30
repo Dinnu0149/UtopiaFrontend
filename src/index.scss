@@ -1,0 +1,28 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+@import "./styles/main";
+
+
+html {
+  body {
+    background-color: var(--background-color);
+  }
+
+  body {
+    &.dark_mode {
+      background-color: var(--background-color);
+    }
+  }
+}
+
+button {
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--light-gray);
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  &:hover {
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+    transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  }
+}

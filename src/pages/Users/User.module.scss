@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.successfullRow {
+  margin-top: 20vh;
+}
+
+.ticketRow {
+  background-image: url("../../assets/images/background/ticketCover.jpg");
+
+  .eventImage {
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .ticketVerticalDesign {
+    border-left: 40px solid rgba(255, 165, 0, 0.5);
+    height: 50%;
+    position: absolute;
+    transform: rotate(310deg);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+.sideNavButtonToggle {
+  input[type="checkbox"] {
+    &:checked {
+      background-color: rgb(45, 55, 72) !important;
+      border: none;
+
+      &::before {
+        transform: translateX(25px);
+      }
+    }
+  }
+}
+
+.followerContainer {
+  .organizerImg {
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+  }
+}
+
+.SearchOrganizationContainer {
+  .organizerImg {
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+  }
+}
