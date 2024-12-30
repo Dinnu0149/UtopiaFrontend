@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "../../../styles/main.scss";
 import { useParams } from "react-router-dom";
 import Layout from "../../../components/Layouts/Layout";

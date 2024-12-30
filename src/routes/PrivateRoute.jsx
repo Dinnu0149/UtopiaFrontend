@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Navigate, Outlet, useNavigate, useLocation } from "react-router-dom";
-import { saveRedirectPath, clearRedirectPath } from "../actions/redirectAction";
+import { saveRedirectPath } from "../actions/redirectAction";
 
 const userGroupDashboard = () => {
   const auth = JSON.parse(localStorage.getItem("eventUser"));

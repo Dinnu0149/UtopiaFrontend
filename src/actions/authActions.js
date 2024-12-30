@@ -90,7 +90,7 @@ export const logoutOpreation = () => async (dispatch) => {
     const response = await plainAxiosInstance.post("api/user/logout/", {
       refresh_token: getRefreshTokenFromCookie()
     });
-    const message = response?.data;    
+    // const message = response?.data;    
 
     localStorage.removeItem("eventUser");
     dispatch(logout());
@@ -141,9 +141,9 @@ export const changePasswordOpreation = (formData) => async (dispatch) => {
     
     dispatch(changePasswordSuccess(message));
   } catch (error) {
-    if (error.response.status == 401) {
+    if (error.response.status === 401) {
       dispatch(changePasswordFailure("Your token has expired, login is required"));
-    } else if (error.response.status == 500) {
+    } else if (error.response.status === 500) {
       dispatch(changePasswordFailure("An error occured while processing request, try again"));
     } else {
       dispatch(changePasswordFailure(error.response?.data));

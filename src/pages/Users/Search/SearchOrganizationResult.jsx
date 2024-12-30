@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { Row, Col, Image, Button, Spinner } from "react-bootstrap";
+import React, { useEffect } from "react";
+import { Row, Col, Image, Button } from "react-bootstrap";
 import "../../../styles/main.scss";
 import styles from "../User.module.scss";
 import Layout from "../../../components/Layouts/Layout";

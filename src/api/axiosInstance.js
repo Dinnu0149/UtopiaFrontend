@@ -1,6 +1,6 @@
 import axios from "axios";
 import store from "../store";
-import { refreshToken, logoutOpreation, clearAuthResponse } from "../actions/authActions";
+import { refreshToken, logoutOpreation } from "../actions/authActions";
 import { getRefreshTokenFromCookie } from "../utils/refreshTokenFromCookie";
 
 export const plainAxiosInstance = axios.create({

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Row, Col } from "react-bootstrap";
 import "../../styles/main.scss";
 import Layout from "../../components/Layouts/Layout";
 import PageHeader from "../../components/Header/PageHeader";
 import ProfileBackgroundCard from "../../sub-components/User/ProfileBackgroundCard";
 import AboutMe from "../../sub-components/User/AboutMe";
-import ProfileDisplayCard from "../../sub-components/User/ProfileDisplayCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserProfile } from "../../actions/profileActions";
 import TransactionCard from "../../sub-components/Wallet/TransactionCard";

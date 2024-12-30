@@ -6,7 +6,6 @@ import "../../styles/main.scss";
 import user from "../../assets/images/icon/user.png";
 import profileCover from "../../assets/images/background/profile-cover.jpg";
 import { convertDate, convertTime } from "../../utils/HelperFunc";
-import ShareEvent from "./Share/ShareEvent";
 
 function DetailInfoCard({
   pk,

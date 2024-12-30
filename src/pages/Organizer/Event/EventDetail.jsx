@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Col, Row, Card } from "react-bootstrap";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import styles from "./Event.module.scss";

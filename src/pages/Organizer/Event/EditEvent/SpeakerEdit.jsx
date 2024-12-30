@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Col, Row, Card, Form, Button, Spinner } from "react-bootstrap";
 // import styles from "./EditEvent.module.scss";
 import "../../../../styles/main.scss";

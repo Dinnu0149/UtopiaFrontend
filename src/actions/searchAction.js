@@ -1,4 +1,4 @@
-import axiosInstance, { plainAxiosInstance } from "../api/axiosInstance";
+import axiosInstance from "../api/axiosInstance";
 import {
   SEARCH_REQUEST,
   SEARCH_SUCCESS,
