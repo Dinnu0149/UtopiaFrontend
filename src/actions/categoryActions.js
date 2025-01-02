@@ -22,9 +22,9 @@ export const getCategorys = () => async (dispatch) => {
   
       dispatch(categorysSuccess(data));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(categorysFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(categorysFailure("An error occured while processing request, try again"));
       } else {
         dispatch(categorysFailure(error.response?.data));
@@ -43,9 +43,9 @@ export const getCategorys = () => async (dispatch) => {
   
       dispatch(createCategorySuccess(data));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(createCategoryFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(createCategoryFailure("An error occured while processing request, try again"));
       } else {
         dispatch(createCategoryFailure(error.response?.data));
@@ -61,9 +61,9 @@ export const getCategorys = () => async (dispatch) => {
   
       dispatch(editCategorySuccess(message));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(editCategoryFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(editCategoryFailure("An error occured while processing request, try again"));
       } else {
         dispatch(editCategoryFailure(error.response?.data));
@@ -81,9 +81,9 @@ export const getCategorys = () => async (dispatch) => {
         dispatch(deleteCategorySuccess(status));
       }
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(deleteCategoryFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(deleteCategoryFailure("An error occured while processing request, try again"));
       } else {
         dispatch(deleteCategoryFailure(error.response?.data));

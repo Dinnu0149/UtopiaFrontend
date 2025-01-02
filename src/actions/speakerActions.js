@@ -21,9 +21,9 @@ export const getEventSpeakers = (pk) => async (dispatch) => {
 
     dispatch(eventSpeakersSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(eventSpeakersFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(eventSpeakersFailure("An error occured while processing request, try again"));
     } else {
       dispatch(eventSpeakersFailure(error.response?.data));
@@ -46,9 +46,9 @@ export const createSpeaker = (event_id, formdata) => async (dispatch) => {
 
     dispatch(createSpeakerSuccess(event));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(createSpeakerFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(createSpeakerFailure("An error occured while processing request, try again"));
     } else {
       dispatch(createSpeakerFailure(error.response?.data));
@@ -66,9 +66,9 @@ export const deleteEventSpeakers = (pk) => async (dispatch) => {
       dispatch(deleteEventSpeakersSuccess(status));
     }
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(deleteEventSpeakersFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(deleteEventSpeakersFailure("An error occured while processing request, try again"));
     } else {
       dispatch(deleteEventSpeakersFailure(error.response?.data));

@@ -18,9 +18,9 @@ import {
       dispatch(followerSuccess(message));
       
     } catch (error) { 
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(followerFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(followerFailure("An error occured while processing request, try again"));
       } else {
         dispatch(followerFailure(error.response?.data));
@@ -37,9 +37,9 @@ import {
       dispatch(editFollowerSuccess(message));
       
     } catch (error) {   
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(editFollowerFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(editFollowerFailure("An error occured while processing request, try again"));
       } else {
         dispatch(editFollowerFailure(error.response?.data));

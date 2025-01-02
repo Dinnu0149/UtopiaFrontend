@@ -115,7 +115,7 @@ function EventInfoEdit() {
 
   useEffect(() => {
     if (deleteResponse) {
-      navigate("/Events", {
+      navigate("/events", {
         state: { message: "Event deleted successfully!" },
       });
     } else if (deleteError) {
@@ -125,7 +125,7 @@ function EventInfoEdit() {
 
   useEffect(() => {
     if (detailError) {
-      navigate("/Events", { state: { message: "detailError" } });
+      navigate("/events", { state: { message: "detailError" } });
     }
   }, [detailError]);
 

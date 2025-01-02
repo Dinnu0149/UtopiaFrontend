@@ -28,9 +28,9 @@ export const getUserProfile = () => async (dispatch) => {
 
     dispatch(profileSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(profileFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(profileFailure("An error occured while processing request, try again"));
     } else {
       dispatch(profileFailure(error.response?.data));
@@ -51,9 +51,9 @@ export const editUserProfile = (editedData) => async (dispatch) => {
     dispatch(editProfileSuccess(message));
     dispatch(updateUserProfileItemOperation(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(editProfileFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(editProfileFailure("An error occured while processing request, try again"));
     } else {
       dispatch(editProfileFailure(error.response?.data));
@@ -70,9 +70,9 @@ export const deleteUserProfile = () => async (dispatch) => {
     dispatch(deleteSuccess(message));
     dispatch(logoutOpreation());
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(deleteFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(deleteFailure("An error occured while processing request, try again"));
     } else {
       dispatch(deleteFailure(error.response?.data));
@@ -88,9 +88,9 @@ export const getUserSetting = () => async (dispatch) => {
 
     dispatch(SettingSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(SettingFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(SettingFailure("An error occured while processing request, try again"));
     } else {
       dispatch(SettingFailure(error.response?.data));
@@ -118,9 +118,9 @@ export const editUserSetting = (editedData) => async (dispatch) => {
     localStorage.setItem("eventUser", JSON.stringify(existing));
 
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(editSettingFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(editSettingFailure("An error occured while processing request, try again"));
     } else {
       dispatch(editSettingFailure(error.response?.data));

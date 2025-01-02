@@ -20,9 +20,9 @@ export const paymentInitialization = (formData) => async (dispatch) => {
     dispatch(initializationSuccess(data));
 
   } catch (error) {  
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
         dispatch(initializationFailure(error.response?.statusText));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(initializationFailure("An error occured while processing request, try again"));
       } else {
         dispatch(initializationFailure(error.response?.data));
@@ -42,9 +42,9 @@ export const paymentVerification = (reference) => async (dispatch) => {
 
     dispatch(verificationSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
         dispatch(verificationFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(verificationFailure("An error occured while processing request, try again"));
       } else {
         dispatch(verificationFailure(error.response?.data));

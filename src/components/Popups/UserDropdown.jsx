@@ -23,23 +23,22 @@ function UserDropdown({ isVisible, handleActionPop, username }) {
       <div className={`${styles["user-dropdown-container"]} shadow `}>
         <div className={styles["user-dropdown-header"]}>
           <h5 className={styles["user-name"]}>{username}</h5>
-          <Link to={"/Profile"} className={styles["user-profile-link"]}>
+          <Link to={"/profile"} className={styles["user-profile-link"]}>
             View my profile
           </Link>
         </div>
         <div className={styles["user-dropdown-body"]}>
-          <Link to={"/EditProfile"} className={styles["dropdown-item"]}>
+          <Link to={"/profile/edit"} className={styles["dropdown-item"]}>
             <i className="fa-regular fa-user border-0"></i> Edit Profile
           </Link>
-          <Link to={"/Favorite"} className={styles["dropdown-item"]}>
-            <i className="fa-solid fa-heart favoriteIcon border-0"></i> Favorite
+          <Link to={"/favorite"} className={styles["dropdown-item"]}>
+            <i className="fa-solid fa-heart fa-bounce favoriteIcon border-0"></i> Favorite
           </Link>
-          <Link href="#" className={styles["dropdown-item"]}>
-            <i className="fa-solid fa-chart-line border-0"></i> Activity Log
+          <Link to={"/settings"} className={styles["dropdown-item"]}>
+            <i className="fa-solid fa-cog fa-spin fa-spin-reverse border-0 "></i> Account Settings
           </Link>
-
-          <Link to={"/Settings"} className={styles["dropdown-item"]}>
-            <i className="fa-solid fa-cog border-0"></i> Account Settings
+          <Link to={"/help"} className={styles["dropdown-item"]}>
+            <i className="fa-solid fa-circle-question fa-flip" style={{'--fa-animation-duration': '3s'}}></i> Help Center
           </Link>
           {user ? (
             <Link
@@ -47,14 +46,14 @@ function UserDropdown({ isVisible, handleActionPop, username }) {
               className={`${styles["dropdown-item"]}`}
               onClick={handleActionPop}
             >
-              <i className="fa-solid fa-sign-out-alt border-0"></i> Sign Out
+              <i className="fa-solid fa-sign-out-alt fa-shake border-0"></i> Sign Out
             </Link>
           ) : (
             <Link
-              to={'/Login'}
+              to={'/login'}
               className={`${styles["dropdown-item"]}`}
             >
-              <i className="fa-solid fa-sign-out-alt border-0"></i> Sign In
+              <i className="fa-solid fa-sign-out-alt fa-shake border-0"></i> Sign In
             </Link>
           )}
         </div>

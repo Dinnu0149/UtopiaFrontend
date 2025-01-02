@@ -67,7 +67,7 @@ function Layout({
   const handleComfirmationPopUps = (messageInfo, messageBgColor) => {
     setMessage({ text: messageInfo, color: messageBgColor });
     setComfirmationAction(true);
-    setTimeout(() => setComfirmationAction(false), 4000);
+    setTimeout(() => setComfirmationAction(false), 5000);
   };
 
   useEffect(() => {
@@ -96,7 +96,7 @@ function Layout({
           isOpen={isSidebarOpen}
         />
         {!dataLoading ? (
-          <div className={`${styles["pagesWrapper"]}`}>
+          <div className={`${styles["pagesWrapper"]} mb-5`}>
             <MessagesPopUp
               isVisible={comfirmationAction}
               message={message.text}

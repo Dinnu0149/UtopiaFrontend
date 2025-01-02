@@ -34,7 +34,7 @@ function ResetPassword() {
     setComfirmationAction(true);
     setTimeout(() => {
       setComfirmationAction(false);
-    }, 4000);
+    }, 5000);
   };
 
   const handleResetPasswordSubmit = (e) => {
@@ -51,7 +51,7 @@ function ResetPassword() {
 
   useEffect(() => {
     if (authState.response) {
-      navigate("/Login", {
+      navigate("/login", {
         state: { message: "Reset successful, Login!" },
       });
     } else if (authState.error) {

@@ -150,7 +150,7 @@ function LoginPopup({ show, handleClose, handleSuccessMassage }) {
                       </Form.Group>
 
                       <div className="d-flex justify-content-end mt-3">
-                        <Link to={"/ForgetPassword"}>
+                        <Link to={"/password/forget"}>
                           Forgot your password?
                         </Link>
                       </div>
@@ -182,7 +182,7 @@ function LoginPopup({ show, handleClose, handleSuccessMassage }) {
                       <div className=" mt-3 mb-5">
                         <p className=" m-0 text-center">
                           Don't have an account?
-                          <Link to={"/SignUp"} className="ms-2">
+                          <Link to={"/signup"} className="ms-2">
                             SignUp
                           </Link>
                         </p>

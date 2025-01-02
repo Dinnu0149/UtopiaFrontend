@@ -32,9 +32,9 @@ export const getNotifications = (page, unread, no_pagination ) => async (dispatc
       unread ? dispatch(notificationsSuccessPopUp(data)) : dispatch(notificationsSuccess(data))
 
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(notificationsFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(notificationsFailure("An error occured while processing request, try again"));
       } else {
         dispatch(notificationsFailure(error.response?.data));
@@ -50,9 +50,9 @@ export const getNotification = (pk) => async (dispatch) => {
   
       dispatch(notificationSuccess(data));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(notificationFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(notificationFailure("An error occured while processing request, try again"));
       } else {
         dispatch(notificationFailure(error.response?.data));
@@ -71,9 +71,9 @@ export const getNotification = (pk) => async (dispatch) => {
   
       dispatch(createSuccess(data));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(createFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(createFailure("An error occured while processing request, try again"));
       } else {
         dispatch(createFailure(error.response?.data));
@@ -91,9 +91,9 @@ export const getNotification = (pk) => async (dispatch) => {
         dispatch(deleteNotificationSuccess(status));
       }
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(deleteNotificationFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(deleteNotificationFailure("An error occured while processing request, try again"));
       } else {
         dispatch(deleteNotificationFailure(error.response?.data));
@@ -118,9 +118,9 @@ export const getNotification = (pk) => async (dispatch) => {
       localStorage.setItem("eventUser", JSON.stringify(existing));
 
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(markAllNotificationFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(markAllNotificationFailure("An error occured while processing request, try again"));
       } else {
         dispatch(markAllNotificationFailure(error.response?.data));

@@ -35,7 +35,7 @@ function SignUp() {
   const handleComfirmationPopUps = (messageInfo, messageBgColor) => {
     setMessage({ text: messageInfo, color: messageBgColor });
     setComfirmationAction(true);
-    setTimeout(() => setComfirmationAction(false), 4000);
+    setTimeout(() => setComfirmationAction(false), 5000);
   };
 
   const handleSignUpSubmit = (e) => {
@@ -137,11 +137,11 @@ function SignUp() {
                     type="checkbox"
                     required
                   />
-                  <Form.Label>Agree to <Link>terms and conditions</Link> </Form.Label>
+                  <Form.Label>Agree to <Link to={'/policy'}>terms and conditions</Link> </Form.Label>
                 </Form.Group>
 
                 <div className="d-flex justify-content-end mt-3">
-                  <Link to={"/ForgetPassword"}>Forgot your password?</Link>
+                  <Link to={"/password/forget"}>Forgot your password?</Link>
                 </div>
 
                 <Button variant="primary" type="submit" className="w-100 mt-3 rounded-pill py-2">
@@ -167,11 +167,11 @@ function SignUp() {
                 <div className=" mt-3 mb-5">
                 <p className=" m-0 text-center">
                     Become an organizer?
-                    <Link to={"/SignUp/Organizer"} className="ms-2">Join</Link>
+                    <Link to={"/signup/organizer"} className="ms-2">Join</Link>
                   </p>
                   <p className=" m-0 text-center">
                     Already have an account?
-                    <Link to={"/Login"} className="ms-2">SignIn</Link>
+                    <Link to={"/login"} className="ms-2">SignIn</Link>
                   </p>
               
                  

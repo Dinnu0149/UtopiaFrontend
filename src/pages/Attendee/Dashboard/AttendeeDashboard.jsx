@@ -110,7 +110,7 @@ function AttendeeDashboard() {
             <h5 className="fw-bold">Upcoming Events</h5>
           </Col>
           <Col className="float-end">
-            <Link to={"/UpcomingEvent"} className="float-end fw-bold">
+            <Link to={"/upcoming/events"} className="float-end fw-bold">
               See all
             </Link>
           </Col>
@@ -152,7 +152,7 @@ function AttendeeDashboard() {
             <h5 className="fw-bold">Nearby Events</h5>
           </Col>
           <Col className="float-end">
-            <Link to={"/Events"} className="float-end fw-bold">
+            <Link to={"/events"} className="float-end fw-bold">
               See all
             </Link>
           </Col>

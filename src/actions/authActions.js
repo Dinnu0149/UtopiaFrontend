@@ -141,9 +141,9 @@ export const changePasswordOpreation = (formData) => async (dispatch) => {
     
     dispatch(changePasswordSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(changePasswordFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(changePasswordFailure("An error occured while processing request, try again"));
     } else {
       dispatch(changePasswordFailure(error.response?.data));
@@ -162,9 +162,9 @@ export const adminChangeUserPasswordOpreation = (formData, pk) => async (dispatc
     const message = response?.data;
     dispatch(changeUserPasswordSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(changeUserPasswordFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(changeUserPasswordFailure("An error occured while processing request, try again"));
     } else {
       dispatch(changeUserPasswordFailure(error.response?.data));

@@ -124,7 +124,7 @@ function CreateEvent() {
     if (createResponse) {
       const { pk } = createResponse;
       setFormData(initialState);
-      navigate(`/${pk}/CreateEventSpeaker`, {
+      navigate(`/organizer/event/${pk}/create/speaker`, {
         state: { message: "Event Created successfully!" },
       });
 

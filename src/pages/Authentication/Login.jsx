@@ -49,7 +49,7 @@ function Login() {
     setComfirmationAction(true);
     setTimeout(() => {
       setComfirmationAction(false);
-    }, 4000);
+    }, 5000);
   };
 
   const handleLoginSubmit = (e) => {
@@ -64,7 +64,7 @@ function Login() {
 
   useEffect(() => {
     if (authState.accessToken) {
-      navigate("/OrganizerDashboard", {
+      navigate("/organizer/dashboard", {
         state: { message: "Login successful!" },
       });
     } else if (authState.error) {      
@@ -149,7 +149,7 @@ function Login() {
                 </Form.Group>
 
                 <div className="d-flex justify-content-end mt-3">
-                  <Link to={"/ForgetPassword"}>Forgot your password?</Link>
+                  <Link to={"/password/forget"}>Forgot your password?</Link>
                 </div>
 
                 <Button
@@ -180,7 +180,7 @@ function Login() {
                 <div className=" mt-3 mb-5">
                   <p className=" m-0 text-center">
                     Don't have an account?
-                    <Link to={"/SignUp"} className="ms-2">
+                    <Link to={"/signup"} className="ms-2">
                       SignUp
                     </Link>
                   </p>

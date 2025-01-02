@@ -20,9 +20,9 @@ export const getRevenues = (page) => async (dispatch) => {
   
       dispatch(RevenuesSuccess(data));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(RevenuesFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(RevenuesFailure("An error occured while processing request, try again"));
       } else {
         dispatch(RevenuesFailure(error.response?.data));
@@ -40,9 +40,9 @@ export const deleteRevenue = (pk) => async (dispatch) => {
         dispatch(deleteRevenuesSuccess(status));
       }
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(deleteRevenuesFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(deleteRevenuesFailure("An error occured while processing request, try again"));
       } else {
         dispatch(deleteRevenuesFailure(error.response?.data));

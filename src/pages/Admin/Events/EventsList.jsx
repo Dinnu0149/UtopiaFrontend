@@ -289,7 +289,7 @@ function EventsList() {
                         <tr key={event.pk}>
                           <td className="fw-bold">{index}.</td>
                           <td className="">
-                            <Link to={`/EventDetail/${event.pk}`}>
+                            <Link to={`/eventdetail/${event.pk}`}>
                               {event.name}
                             </Link>
                           </td>

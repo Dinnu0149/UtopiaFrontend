@@ -32,7 +32,7 @@ function ProfileBackgroundCard({ username, email, profile_picture }) {
         </Row>
         <Button
           as={NavLink}
-          to="/EditProfile"
+          to="/profile/edit"
           variant=""
           className="float-end btn_reverse d-none d-sm-block"
         >
@@ -45,24 +45,24 @@ function ProfileBackgroundCard({ username, email, profile_picture }) {
         className={`${styles["profileNavBottom"]} px-4 border-0 border-top profileNavBottom`}
       >
         <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
-          <Nav.Link as={NavLink} to="/Profile">
+          <Nav.Link as={NavLink} to="/profile">
             Overview
           </Nav.Link>
         </Nav.Item>
         <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
-          <Nav.Link as={NavLink} to="/Following">
+          <Nav.Link as={NavLink} to="/following">
             Following
           </Nav.Link>
         </Nav.Item>
         {UserAllowed(["organizer"]) ? (
           <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
-            <Nav.Link as={NavLink} to="/Wallet">
+            <Nav.Link as={NavLink} to="/organizer/wallet">
               My Wallet
             </Nav.Link>
           </Nav.Item>
         ) : UserAllowed(["admin"]) ? (
           <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
-            <Nav.Link as={NavLink} to="/AdminWallet">
+            <Nav.Link as={NavLink} to="/admin/wallet">
               App Wallet
             </Nav.Link>
           </Nav.Item>

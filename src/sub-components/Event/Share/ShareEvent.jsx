@@ -10,7 +10,7 @@ import {
 } from "react-share";
 
 function ShareEvent({ pk, name }) {
-  const shareUrl = `${window.location.origin}/EventDetail/${pk}`;
+  const shareUrl = `${window.location.origin}/eventdetail/${pk}`;
   const title = `Check out this event: ${name}`;
 
   return (

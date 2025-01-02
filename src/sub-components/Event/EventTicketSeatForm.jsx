@@ -30,7 +30,7 @@ function EventTicketSeatForm({ name, handleFocus, price, ticket_id, total_ticket
   };
 
   const handleContinueBooking = () => {
-    navigate(`/EventDetail/${pk}/ticket/${ticket_id}/review`);
+    navigate(`/eventdetail/${pk}/ticket/${ticket_id}/review`);
     setIsFocused(false);
     localStorage.setItem(
       "ticket_info",

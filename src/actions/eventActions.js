@@ -27,9 +27,9 @@ export const getEvents = (url = "api/event/general_events/") => async (dispatch)
     dispatch(eventSuccess(data));
     
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(eventFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(eventFailure("An error occured while processing request, try again"));
     } else {
       dispatch(eventFailure(error.response?.data));
@@ -45,9 +45,9 @@ export const getEventDetail = (pk) => async (dispatch) => {
 
     dispatch(eventDetailSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(eventDetailFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(eventDetailFailure("An error occured while processing request, try again"));
     } else {
       dispatch(eventDetailFailure(error.response?.data));
@@ -67,9 +67,9 @@ export const createEvent = (formdata) => async (dispatch) => {
 
     dispatch(createEventSuccess(event));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(createEventFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(createEventFailure("An error occured while processing request, try again"));
     } else {
       dispatch(createEventFailure(error.response?.data));
@@ -85,9 +85,9 @@ export const editEvent = (pk, editedData) => async (dispatch) => {
 
     dispatch(editEventSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(editEventFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(editEventFailure("An error occured while processing request, try again"));
     } else {
       dispatch(editEventFailure(error.response?.data));
@@ -105,9 +105,9 @@ export const deleteEvent = (pk) => async (dispatch) => {
       dispatch(deleteSuccess(status));
     }
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(deleteFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(deleteFailure("An error occured while processing request, try again"));
     } else {
       dispatch(deleteFailure(error.response?.data));

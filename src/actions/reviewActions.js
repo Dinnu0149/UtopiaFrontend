@@ -17,9 +17,9 @@ export const getEventReviews = (pk) => async (dispatch) => {
   
       dispatch(eventReviewsSuccess(data));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(eventReviewsFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(eventReviewsFailure("An error occured while processing request, try again"));
       } else {
         dispatch(eventReviewsFailure(error.response?.data));
@@ -39,9 +39,9 @@ export const getEventReviews = (pk) => async (dispatch) => {
 
       dispatch(createReviewSuccess(event));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(createReviewFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(createReviewFailure("An error occured while processing request, try again"));
       } else {
         dispatch(createReviewFailure(error.response?.data));

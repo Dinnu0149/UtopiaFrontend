@@ -10,7 +10,7 @@ function QrScanner() {
   const [scannedData, setScannedData] = useState(null);
 
   useEffect(() => {
-    const verificationPath = "/TicketVerification";
+    const verificationPath = "/ticket/verification";
     if (scannedData) {
       try {
         const url = new URL(scannedData);

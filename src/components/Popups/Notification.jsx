@@ -54,7 +54,7 @@ function Notification({ isVisible }) {
       >
         <div className={styles["notification-header"]}>
           <h5>Notifications</h5>
-          <Link to={'/Settings'}>
+          <Link to={'/settings'}>
             <i className="fa-solid fa-gear fa-spin-pulse "></i>
           </Link>
         </div>
@@ -62,7 +62,7 @@ function Notification({ isVisible }) {
         {notifications && notifications.length > 0 ? (
           notifications.slice(0, 3).map((notification) => (
             <div key={notification.pk} className={styles["notification-item"]}>
-              <Link to={`/Notification/${notification.pk}`} className="">
+              <Link to={`/notification/${notification.pk}`} className="">
                 <h5 className={`fw-bold mb-0 ${styles["notification-title"]}`}>
                   {notification.title}
                 </h5>
@@ -81,7 +81,7 @@ function Notification({ isVisible }) {
         )} 
         </Card.Body>
         <div className={styles["notification-footer"]}>
-          <Link to={`/Notifications`}>See all Notifications</Link>
+          <Link to={`/notifications`}>See all Notifications</Link>
         </div>
       </Card>
     </CSSTransition>

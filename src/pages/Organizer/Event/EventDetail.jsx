@@ -132,7 +132,7 @@ function EventDetail() {
                 <p className="mb-0">How user choose to rate it</p>
               </div>
               <Link
-                to={`/CreateViewReview/${pk}`}
+                to={`/create/viewreview//${pk}`}
                 className={`d-flex gap-3 mt-2 align-items-center ${styles["detailSeeMore"]}`}
               >
                 See More

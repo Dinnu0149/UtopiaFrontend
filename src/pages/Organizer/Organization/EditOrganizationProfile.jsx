@@ -82,7 +82,7 @@ function EditOrganizationProfile() {
         });
         dispatch(clearRedirectPath());
       } else {
-        navigate(`/OrganizationProfile/${owner_id}`, {
+        navigate(`/organization/profile/${owner_id}`, {
           state: { message: "Organization updated successfully!" },
         });
       }

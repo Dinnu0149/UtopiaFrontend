@@ -13,7 +13,7 @@ const TicketActionsUi = (booking, deletClick) => {
           <Button
             className="btn_reverse rounded-pill w-100 py-1"
             as={NavLink}
-            to={`/CreateViewReview/${booking.event?.pk}`}
+            to={`/create/viewreview/${booking.event?.pk}`}
           >
             Review
           </Button>
@@ -40,7 +40,7 @@ const TicketActionsUi = (booking, deletClick) => {
           <Button
             className="rounded-pill w-100 py-1"
             as={NavLink}
-            to={`/Ticket/${booking.pk}`}
+            to={`/ticket/${booking.pk}`}
           >
             Ticket
           </Button>
@@ -65,7 +65,7 @@ function BookingCard({ booking = [], handleDelete }) {
               lg={12}
               className={`${styles["bookedEventImageContainer"]}`}
               as={NavLink}
-              to={`/EventDetail/${booking.event?.pk}`}
+              to={`/eventdetail/${booking.event?.pk}`}
             >
               <div
                 className={`position-relative mb-1 ${styles["eventImageBody"]}`}

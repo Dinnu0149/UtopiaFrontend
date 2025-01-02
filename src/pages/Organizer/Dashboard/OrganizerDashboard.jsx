@@ -195,7 +195,7 @@ function OrganizerDashboard() {
           </Col>
         </Row>
         {upcoming_event && upcoming_event.length > 0 ? (
-          <ActiveEvent upcoming={upcoming_event} title={"My Upcoming Events "} path={"/MyEvents"}/>
+          <ActiveEvent upcoming={upcoming_event} title={"My Upcoming Events "} path={"/organizer/event"}/>
         ) : (
           <NonAvailable message={"No Upcoming Event Available"} imageSrc={upcomingIllustration} />
         )}

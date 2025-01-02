@@ -108,7 +108,7 @@ function ETicketVerifcation() {
                   {auth.user ? (
                     ""
                   ) : (
-                    <Link to={"/Login"}>Login to register ticket</Link>
+                    <Link to={"/login"}>Login to register ticket</Link>
                   )}
                 </div>
               </Card>
@@ -251,7 +251,7 @@ function ETicketVerifcation() {
                       </Col>
                       <Col>
                         <Button className="btn p-2 w-100">
-                          <Link to={"/QrScanner"} className="text-light">
+                          <Link to={"/qrscanner"} className="text-light">
                             Scanner
                           </Link>
                         </Button>
@@ -269,7 +269,7 @@ function ETicketVerifcation() {
                   {auth.user ? (
                     ""
                   ) : (
-                    <Link onClick={handleSetLoginRedirectPath} to={"/Login"}>
+                    <Link onClick={handleSetLoginRedirectPath} to={"/Logloginin"}>
                       Login to register ticket
                     </Link>
                   )}

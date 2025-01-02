@@ -38,14 +38,14 @@ function BookingCard({ bookings }) {
                       <td className="d-block">
                         <Image src={booking.event?.image} width={60} rounded />
                         <Link
-                          to={`/EventDetail/${booking.event.pk}`}
+                          to={`/eventdetail/${booking.event.pk}`}
                           className="ms-1"
                         >
                           {truncateSentence(booking.event.event_name, 1)}
                         </Link>
                       </td>
                       <td className="">
-                        <Link to={`/Ticket/${booking.pk}`} className="p-1 ">
+                        <Link to={`/ticket/${booking.pk}`} className="p-1 ">
                           {booking.ticket_name}
                         </Link>
                       </td>
@@ -76,7 +76,7 @@ function BookingCard({ bookings }) {
             <NonAvailable message="Sorry booking not avaliable" imageSrc={bookingIllustration}/>
           )}
           <Card.Footer className="bg-white text-center">
-            <Link to={"/Booking"} className="link-primary">
+            <Link to={"/booking"} className="link-primary">
               View All Tickets
             </Link>
           </Card.Footer>

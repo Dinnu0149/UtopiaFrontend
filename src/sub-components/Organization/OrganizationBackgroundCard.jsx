@@ -171,7 +171,7 @@ function OrganizationBackgroundCard({ organization }) {
                   {UserAllowed(["organizer"]) ? (
                     <ListGroup.Item
                       as={NavLink}
-                      to={`/OrganizationEdit/${owner_id}`}
+                      to={`/organization/profile/edit/${owner_id}`}
                       className="text-center"
                     >
                       Edit

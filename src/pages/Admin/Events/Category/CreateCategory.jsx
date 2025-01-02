@@ -56,7 +56,7 @@ function CreateCategory() {
 
   useEffect(() => {
     if (createResponse) {
-      navigate("/AdminCategory", {
+      navigate("/admin/category", {
         state: { message: "Category created successfully!" },
       });
     } else if (createError) {

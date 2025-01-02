@@ -20,9 +20,9 @@ export const getEventSchedules = (pk) => async (dispatch) => {
 
     dispatch(eventSchedulesSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(eventSchedulesFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(eventSchedulesFailure("An error occured while processing request, try again"));
     } else {
       dispatch(eventSchedulesFailure(error.response?.data));
@@ -41,9 +41,9 @@ export const createSchedule = (event_id, formdata) => async (dispatch) => {
 
     dispatch(createScheduleSuccess(event));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(createScheduleFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(createScheduleFailure("An error occured while processing request, try again"));
     } else {
       dispatch(createScheduleFailure(error.response?.data));
@@ -61,9 +61,9 @@ export const deleteEventSchedules = (pk) => async (dispatch) => {
       dispatch(deleteEventSchedulesSuccess(status));
     }
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(deleteEventSchedulesFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(deleteEventSchedulesFailure("An error occured while processing request, try again"));
     } else {
       dispatch(deleteEventSchedulesFailure(error.response?.data));

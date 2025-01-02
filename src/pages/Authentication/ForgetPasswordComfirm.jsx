@@ -29,7 +29,7 @@ function ForgetPasswordComfirm() {
               <p className="mb-3 text-center"> A private link has been sent to your email address.</p>
               <Button
                 as={NavLink}
-                to={"/Login"}
+                to={"/login"}
                 variant="primary"
                 type="submit"
                 className="w-100 mt-3"

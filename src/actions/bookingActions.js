@@ -30,9 +30,9 @@ export const getBookings = (page) => async (dispatch) => {
 
     dispatch(BookingsSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(BookingsFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(BookingsFailure("An error occured while processing request, try again"));
     } else {
       dispatch(BookingsFailure(error.response?.data));
@@ -48,9 +48,9 @@ export const getBooking = (pk) => async (dispatch) => {
     
     dispatch(getBookingSuccess(data))
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(getBookingFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(getBookingFailure("An error occured while processing request, try again"));
     } else {
       dispatch(getBookingFailure(error.response?.data));
@@ -69,9 +69,9 @@ export const deleteBooking = (pk) => async (dispatch) => {
       dispatch(deleteBookingsSuccess(status));
     }
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(deleteBookingsFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(deleteBookingsFailure("An error occured while processing request, try again"));
     } else {
       dispatch(deleteBookingsFailure(error.response?.data));
@@ -87,9 +87,9 @@ export const verifyBooking = (pk) => async (dispatch) => {
     
     dispatch(verifyBookingSuccess(data))
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(verifyBookingFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(verifyBookingFailure("An error occured while processing request, try again"));
     } else {
       dispatch(verifyBookingFailure(error.response?.data));
@@ -111,9 +111,9 @@ export const registerBooking = (pk) => async (dispatch) => {
     
     dispatch(registerBookingSuccess(data))
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(registerBookingFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(registerBookingFailure("An error occured while processing request, try again"));
     } else {
       dispatch(registerBookingFailure(error.response?.data));

@@ -186,7 +186,7 @@ function CreateEventTicket() {
                         <Button
                           className="w-100 btn_reverse"
                           as={NavLink}
-                          to={`/EventDetail/${event_id}`}
+                          to={`/eventdetail/${event_id}`}
                         >
                           View Event
                         </Button>

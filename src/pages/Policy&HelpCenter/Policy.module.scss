@@ -1,0 +1,38 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+@import "../../styles/main";
+
+.headerText {
+  color: var(--primary-color) !important;
+}
+
+.searchContainer {
+  .searchField {
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-top-left-radius: 50px !important;
+    border-bottom-left-radius: 50px !important;
+
+    &::placeholder {
+      text-align: center;
+      color: #999;
+    }
+  }
+
+  .searchButton {
+    border-top-right-radius: 50px !important;
+    border-bottom-right-radius: 50px !important;
+  }
+
+  .contactNavButton {
+    button {
+      border: none;
+      color: var(--secondary-color) !important;
+
+      &:hover {
+        border-top: 1px solid $primary-color;
+        color: var(--primary-color) !important;
+      }
+    }
+  }
+}

@@ -46,7 +46,7 @@ function DetailInfoCard({
           </Col>
           <Col lg={12} md={12} sm={12} xs={12} className="mb-3">
             <Link
-              to={`/OrganizationProfile/${organizerPk}`}
+              to={`/organization/profile/${organizerPk}`}
               className={`d-flex gap-3 mt-2 align-items-center float-end mx-3 ${styles["detailSeeMore"]}`}
             >
               View Profile

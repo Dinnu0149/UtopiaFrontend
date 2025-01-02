@@ -189,7 +189,7 @@ function CreateEventSpeaker() {
                         <Button
                           className="w-100 btn_reverse"
                           as={NavLink}
-                          to={`/${event_id}/CreateEventSchdule`}
+                          to={`/organizer/event/${event_id}/create/schdule`}
                         >
                           Next
                         </Button>

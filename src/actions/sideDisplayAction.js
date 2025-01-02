@@ -13,9 +13,9 @@ export const getSideDisplay = () => async (dispatch) => {
   
       dispatch(sideDisaplaySuccess(data));
     } catch (error) {
-        if (error.response.status === 401) {
+        if (error.response?.status === 401) {
             dispatch(sideDisaplayFailure("Your token has expired, login is required"));
-          } else if (error.response.status === 500) {
+          } else if (error.response?.status === 500) {
             dispatch(sideDisaplayFailure("An error occured while processing request, try again"));
           } else {
             dispatch(sideDisaplayFailure(error.response?.data));

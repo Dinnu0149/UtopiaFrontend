@@ -36,7 +36,7 @@ function ActiveEvent({ upcoming, title, path }) {
                   <tr key={index}>
                     <td className="fw-bold">{index}.</td>
                     <td className="">
-                      <Link to={`/EventDetail/${event.pk}`} className="">
+                      <Link to={`/eventdetail/${event.pk}`} className="">
                         {event.name}
                       </Link>
                     </td>

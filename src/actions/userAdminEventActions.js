@@ -23,9 +23,9 @@ export const getEvents = (page) => async (dispatch) => {
 
     dispatch(userAdminEventSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(userAdminEventFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(userAdminEventFailure("An error occured while processing request, try again"));
     } else {
       dispatch(userAdminEventFailure(error.response?.data));
@@ -41,9 +41,9 @@ export const eventApprovalUpdate = (pk) => async (dispatch) => {
 
     dispatch(userAdminEventApprovalSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(userAdminEventApprovalFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(userAdminEventApprovalFailure("An error occured while processing request, try again"));
     } else {
       dispatch(userAdminEventApprovalFailure(error.response?.data));
@@ -59,9 +59,9 @@ export const eventActivation = (pk) => async (dispatch) => {
 
     dispatch(eventActivationSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(eventActivationFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(eventActivationFailure("An error occured while processing request, try again"));
     } else {
       dispatch(eventActivationFailure(error.response?.data));

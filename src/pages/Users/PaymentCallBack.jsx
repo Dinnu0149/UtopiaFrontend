@@ -31,11 +31,11 @@ function PaymentCallBack() {
 
 
   const handleETicketRediret = () => {
-    navigate(`/Ticket/${booking_id}`);
+    navigate(`/ticket/${booking_id}`);
   };
 
   const handleEventRediret = () => {
-    navigate("/Events");
+    navigate("/events");
   };
 
   useEffect(() => {

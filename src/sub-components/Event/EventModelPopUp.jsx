@@ -44,7 +44,7 @@ const ActionButton = (pk, status, deadline, handleTickets) => {
     return (
       <Button
         as={NavLink}
-        to={`/CreateViewReview/${pk}`}
+        to={`/create/viewreview//${pk}`}
         className="rounded px-4 text-light bg-success"
       >
         Reviews
@@ -63,7 +63,7 @@ function EventModelPopUp({ event, show, handleClose }) {
   };
 
   const handleTickets = (pk) => {
-    navigate(`/EventDetail/${pk}/tickets`);
+    navigate(`/eventdetail/${pk}/tickets`);
   };
 
   return (
@@ -163,7 +163,7 @@ function EventModelPopUp({ event, show, handleClose }) {
                   {truncateSentence(event.description, 16)}...
                   <Button
                     as={Link}
-                    to={`/EventDetail/${event.pk}`}
+                    to={`/eventdetail/${event.pk}`}
                     className="float-end rounded btn_reverse"
                   >
                     View More
@@ -199,7 +199,7 @@ function EventModelPopUp({ event, show, handleClose }) {
                       className={`img-fluid ${styles["profileImg"]}`}
                     />
                     <div>
-                      <Link to={`/OrganizationProfile/${event.created_by?.id}`}>
+                      <Link to={`/organization/profile/${event.created_by?.id}`}>
                         <h5 className="m-0 p-0">
                           {event.organization?.organization_name}
                         </h5>
@@ -231,7 +231,7 @@ function EventModelPopUp({ event, show, handleClose }) {
                           src={speaker.picture ? speaker.picture : user}
                         />
                         <div>
-                          <Link to={"/Profile"}>
+                          <Link to={"/profile"}>
                             <p className="m-0 p-0 fw-bold">
                               {speaker.first_name} {speaker.last_name}
                             </p>
@@ -248,7 +248,7 @@ function EventModelPopUp({ event, show, handleClose }) {
                           {speaker.bio
                             ? truncateSentence(speaker.bio, 6)
                             : "No boi For this speaker"}
-                          .... <Link to={`/EventDetail/${event.pk}`}>More</Link>
+                          .... <Link to={`/eventdetail/${event.pk}`}>More</Link>
                         </p>
                       </Col>
                     </Row>

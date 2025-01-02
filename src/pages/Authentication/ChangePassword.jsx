@@ -34,7 +34,7 @@ function ChangePassword() {
 
   useEffect(() => {
     if (authState.response) {
-      navigate("/EditProfile", {
+      navigate("/profile/edit", {
         state: { message: "Password reset successful!" },
       });
     } else if (authState.error) {
@@ -136,9 +136,6 @@ function ChangePassword() {
                             "Save Changes "
                           )}
                         </Button>
-                      </Col>
-                      <Col>
-                        <Button className="w-100 btn_reverse">Back </Button>
                       </Col>
                     </Row>
                   </div>

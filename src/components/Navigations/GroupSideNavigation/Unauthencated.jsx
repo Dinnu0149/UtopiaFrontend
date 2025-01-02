@@ -20,7 +20,7 @@ function Unauthencated() {
 
         <Nav.Link
           as={NavLink}
-          to={"/Events"}
+          to={"/events"}
           className={`${styles["nav-item"]} mb-2`}
         >
           <i className="fas fa-layer-group"></i> Events
@@ -28,7 +28,7 @@ function Unauthencated() {
 
         <Nav.Link
           as={NavLink}
-          to={"/UpcomingEvent"}
+          to={"/upcoming/events"}
           className={`${styles["nav-item"]} mb-2`}
         >
           <i className="fas fa-lock"></i> Upcoming
@@ -36,7 +36,7 @@ function Unauthencated() {
       </div>
       <Nav.Link
         as={NavLink}
-        to={"/SearchEvent"}
+        to={"/search/event"}
         className={`${styles["nav-item"]} mb-2`}
       >
         <i className="fas fa-search"></i> Search
@@ -47,7 +47,7 @@ function Unauthencated() {
 
         <Nav.Link
           as={NavLink}
-          to={"/Login"}
+          to={"/login"}
           className={`${styles["nav-item"]} mb-2`}
         >
           <i className="fa-solid fa-right-from-bracket"></i> Login

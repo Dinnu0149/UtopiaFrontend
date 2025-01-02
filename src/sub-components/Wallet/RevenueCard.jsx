@@ -32,7 +32,7 @@ function RevenueCard({ revenues, redirectPath }) {
                   return (
                     <tr key={revenue.pk}>
                       <td className="">
-                        <Link to={`/EventDetail/${revenue.event.pk}`}>
+                        <Link to={`/eventdetail/${revenue.event.pk}`}>
                           {revenue.event.event_name}
                         </Link>
                       </td>

@@ -24,9 +24,9 @@ export const getOrganizationProfile = (organizer_id) => async (dispatch) => {
 
     dispatch(organizationSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(organizationFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(organizationFailure("An error occured while processing request, try again"));
     } else {
       dispatch(organizationFailure(error.response?.data));
@@ -55,9 +55,9 @@ export const editOrganizationProfile = (editedData) => async (dispatch) => {
 
     dispatch(editOrganizationSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(editOrganizationFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(editOrganizationFailure("An error occured while processing request, try again"));
     } else {
       dispatch(editOrganizationFailure(error.response?.data));
@@ -73,9 +73,9 @@ export const getOrganizationWithdrawalInfo = () => async (dispatch) => {
     
     dispatch(organizationGetWithdrawalSuccess(message));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(organizationGetWithdrawalFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(organizationGetWithdrawalFailure("An error occured while processing request, try again"));
     } else {
       dispatch(organizationGetWithdrawalFailure(error.response?.data));
@@ -92,9 +92,9 @@ export const updateOrganizationWithdrawalInfo = (editedData) => async (dispatch)
     dispatch(organizationEditWithdrawalSuccess(message));
 
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(organizationEditWithdrawalFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(organizationEditWithdrawalFailure("An error occured while processing request, try again"));
     } else {
       dispatch(organizationEditWithdrawalFailure(error.response?.data));

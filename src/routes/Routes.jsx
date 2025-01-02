@@ -1,6 +1,6 @@
 import React from "react";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import SignUp from "../pages/Authentication/SignUp";
 import Login from "../pages/Authentication/Login";
 import ForgetPassword from "../pages/Authentication/ForgetPassword";
@@ -62,6 +62,8 @@ import QrScanner from "../pages/Scanner/QrScanner";
 import PageNotFound from "../pages/Error/PageNotFound";
 import SearchEventResult from "../pages/Users/Search/SearchEventResult";
 import SearchOrganizationResult from "../pages/Users/Search/SearchOrganizationResult";
+import TermsCondition from "../pages/Policy&HelpCenter/TermsCondition";
+import HelpCenter from "../pages/Policy&HelpCenter/HelpCenter";
 
 
 function NavigationControl() {
@@ -69,16 +71,16 @@ function NavigationControl() {
     <Router>
       <Routes>
         <Route element={<UnauthencatedRoute />}>
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/SignUp/Organizer" element={<OrganizerSignUp />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/ForgetPassword" element={<ForgetPassword />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup/organizer" element={<OrganizerSignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/password/forget" element={<ForgetPassword />} />
           <Route
-            path="/ForgetPasswordComfirm"
+            path="/password/forget/comfirm"
             element={<ForgetPasswordComfirm />}
           />
           <Route
-            path="/reset-password/:uidb64/:token"
+            path="/password/reset/:uidb64/:token"
             element={<ResetPassword />}
           />
         </Route>
@@ -86,76 +88,76 @@ function NavigationControl() {
         <Route element={<AuthencatedRoute />}>
           <Route element={<PrivateGroupRoute allowedGroups={["organizer"]} />}>
 
-            <Route path="/OrganizerDashboard" element={<OrganizerDashboard />}/>
-            <Route path="/OrganizationEdit/:owner_id" element={<EditOrganizationProfile />} /> 
+            <Route path="/organizer/dashboard" element={<OrganizerDashboard />}/>
+            <Route path="/organization/profile/edit/:owner_id" element={<EditOrganizationProfile />} /> 
 
             <Route element={<OrganizationProfileRequired />}>
-              <Route path="/MyEvents" element={<MyEvents />} />
-              <Route path="/CreateEvent" element={<CreateEvent />} />
-              <Route path="/:event_id/CreateEventSchdule" element={<CreateEventSchdule />} />
-              <Route path="/:event_id/CreateEventSpeaker" element={<CreateEventSpeaker />} />
-              <Route path="/:event_id/CreateEventTicket" element={<CreateEventTicket />} />
-              <Route path="/SpeakerEdit/:pk" element={<SpeakerEdit />} />
-              <Route path="/SchduleEdit/:pk" element={<SchduleEdit />} />
-              <Route path="/TicketEdit/:pk" element={<TicketEdit />} />
-              <Route path="/EventInfoEdit/:pk" element={<EventInfoEdit />} />
-              <Route path="/Wallet" element={<Wallet />} />
-              <Route path="/Revenue" element={<RevenueList />} /> 
+              <Route path="/organizer/event" element={<MyEvents />} />
+              <Route path="/organizer/event/create" element={<CreateEvent />} />
+              <Route path="/organizer/event/:event_id/create/schdule" element={<CreateEventSchdule />} />
+              <Route path="/organizer/event/:event_id/create/speaker" element={<CreateEventSpeaker />} />
+              <Route path="/organizer/event/:event_id/create/ticket" element={<CreateEventTicket />} />
+              <Route path="/organizer/event/speaker/edit/:pk" element={<SpeakerEdit />} />
+              <Route path="/organizer/event/schdule/edit/:pk" element={<SchduleEdit />} />
+              <Route path="/organizer/event/ticket/edit/:pk" element={<TicketEdit />} />
+              <Route path="/organizer/event/info/edit/:pk" element={<EventInfoEdit />} />
+              <Route path="/organizer/wallet" element={<Wallet />} />
+              <Route path="/organizer/revenue" element={<RevenueList />} /> 
             </Route>
-   
           </Route>
 
           <Route element={<PrivateGroupRoute allowedGroups={["attendee"]} />}>
-            <Route path="/AttendeeDashboard" element={<AttendeeDashboard />} />
+            <Route path="/attendee/dashboard" element={<AttendeeDashboard />} />
           </Route>
 
           <Route element={<PrivateGroupRoute allowedGroups={["admin"]} />}>
-            <Route path="/AdminDashboard" element={<AdminDashboard />} />
-            <Route path="/User" element={<UserList />} />
-            <Route path="/EventsList" element={<EventsList />} />
-            <Route path="/AdminCategory" element={<AdminListCategory />} />
-            <Route path="/CreateCategory" element={<CreateCategory />} />
-            <Route path="/CreateNotification" element={<CreateNotification />} />
-            <Route path="/ChangeUserPassword/:pk" element={<ChangeUserPassword />} />
-            <Route path="/AdminWallet" element={<AdminWallet />} />
-            <Route path="/AdminRevenue" element={<AdminRevenueList />} />
-            <Route path="/AdminTransactions" element={<AdminTransactions />} />
+            <Route path="/admin/dashboard" element={<AdminDashboard />} />
+            <Route path="/admin/user" element={<UserList />} />
+            <Route path="/admin/events/list" element={<EventsList />} />
+            <Route path="/admin/category" element={<AdminListCategory />} />
+            <Route path="/admin/category/create" element={<CreateCategory />} />
+            <Route path="/admin/create/notification" element={<CreateNotification />} />
+            <Route path="/admin/change/user/password/:pk" element={<ChangeUserPassword />} />
+            <Route path="/admin/wallet" element={<AdminWallet />} />
+            <Route path="/admin/revenue" element={<AdminRevenueList />} />
+            <Route path="/admin/transactions" element={<AdminTransactions />} />
           </Route>
 
           <Route element={<PrivateGroupRoute allowedGroups={["organizer", "admin"]} />}>
-            <Route path="/QrScanner" element={<QrScanner />} />
+            <Route path="/qrscanner" element={<QrScanner />} />
           </Route>
 
-          <Route path="/ChangePassword" element={<ChangePassword />} />
-          <Route path="/EditProfile" element={<EditProfile />} />
-          <Route path="/Profile" element={<Profile />} />
-
-          <Route path="/UpcomingEvent" element={<UpcomingEvent />} />
+          <Route path="/change/password" element={<ChangePassword />} />
+          <Route path="/profile/edit" element={<EditProfile />} />
+          <Route path="/profile" element={<Profile />} />
 
           <Route path="/payment/callback" element={<PaymentCallBack />} />
-          <Route path="/Ticket/:booking_id" element={<TicketDetail />} />
+          <Route path="/ticket/:booking_id" element={<TicketDetail />} />
 
-          <Route path="/Transactions" element={<Transactions />} />
-          <Route path="/Booking" element={<BookingList />} />
+          <Route path="/transactions" element={<Transactions />} />
+          <Route path="/booking" element={<BookingList />} />
 
-          <Route path="/Favorite" element={<FavoriteEvent />} />
-          <Route path="/Following" element={<Following />} />
+          <Route path="/favorite" element={<FavoriteEvent />} />
+          <Route path="/following" element={<Following />} />
 
-          <Route path="/Settings" element={<AccountSettings />} />
-          <Route path="/Notifications" element={<Notifications />} />
-          <Route path="/Notification/:pk" element={<NotificationDetail />} />
+          <Route path="/settings" element={<AccountSettings />} />
+          <Route path="/notifications" element={<Notifications />} />
+          <Route path="/notification/:pk" element={<NotificationDetail />} />
         </Route>
         
-        <Route path="/OrganizationProfile/:owner_id" element={<OrganizationProfile />} />
-        <Route path="/TicketVerification/:booking_id" element={<ETicketVerifcation />} />
-        <Route path="/Events" element={<Events />} />
-        <Route path="/EventDetail/:pk" element={<EventDetail />} />
-        <Route path="/EventDetail/:pk/tickets" element={<EventTicket />} />
-        <Route path="/EventDetail/:pk/ticket/:ticket_id/review" element={<EventBookingReview />} />
-        <Route path="/Categorise" element={<Categorise />} />
-        <Route path="/SearchEvent" element={<SearchEventResult />} />
-        <Route path="/SearchOrganization" element={<SearchOrganizationResult />} />
-        <Route path="/CreateViewReview/:pk" element={<CreateViewReview />} />
+        <Route path="/organization/profile/:owner_id" element={<OrganizationProfile />} />
+        <Route path="/ticket/verification/:booking_id" element={<ETicketVerifcation />} />
+        <Route path="/events" element={<Events />} />
+        <Route path="/upcoming/events" element={<UpcomingEvent />} />
+        <Route path="/eventdetail/:pk" element={<EventDetail />} />
+        <Route path="/eventdetail/:pk/tickets" element={<EventTicket />} />
+        <Route path="/eventdetail/:pk/ticket/:ticket_id/review" element={<EventBookingReview />} />
+        <Route path="/categorise" element={<Categorise />} />
+        <Route path="/search/event" element={<SearchEventResult />} />
+        <Route path="/search/organization" element={<SearchOrganizationResult />} />
+        <Route path="/create/viewreview/:pk" element={<CreateViewReview />} />
+        <Route path="/policy" element={<TermsCondition />} />
+        <Route path="/help" element={<HelpCenter />} />
         <Route path="*"  element={<PageNotFound />} />
       </Routes>
     </Router>

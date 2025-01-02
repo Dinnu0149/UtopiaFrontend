@@ -7,9 +7,9 @@ const userGroupDashboard = () => {
   const auth = JSON.parse(localStorage.getItem("eventUser"));
   const groups = auth && auth.groups ? auth.groups : [];
 
-  if (groups.includes("admin")) return "/AdminDashboard";
-  if (groups.includes("organizer")) return "/OrganizerDashboard";
-  if (groups.includes("attendee")) return "/AttendeeDashboard";
+  if (groups.includes("admin")) return "/admin/dashboard";
+  if (groups.includes("organizer")) return "/organizer/dashboard";
+  if (groups.includes("attendee")) return "/attendee/dashboard";
   return "/";
 };
 
@@ -51,7 +51,7 @@ export const AuthencatedRoute = () => {
   }, [dispatch, location.pathname]);
 
   return !user ? (
-    <Navigate to={"/Login"} replace state={{ message: "Login required!" }} />
+    <Navigate to={"/login"} replace state={{ message: "Login required!" }} />
   ) : (
     <Outlet />
   );
@@ -86,7 +86,7 @@ export const OrganizationProfileRequired = () => {
 
     return (
       <Navigate
-        to={`/OrganizationEdit/${auth.user.pk}/`}
+        to={`/organization/profile/edit/${auth.user.pk}/`}
         replace
         state={{ message: "Organization profile required!" }}
       />

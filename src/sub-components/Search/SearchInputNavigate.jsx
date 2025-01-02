@@ -69,16 +69,16 @@ function SearchInputNavigate() {
       </Row>
       <Nav
         variant="tabs"
-        className={`${styles["searchNavBottom"]} px-4 border-0 border-top d-flex justify-content-center `}
+        className={`${styles["searchNavButton"]} px-4 border-0 border-top d-flex justify-content-center `}
       >
-        <Nav.Item className={`${styles["searchNavBottomItem"]}`}>
-          <Nav.Link as={NavLink} to="/SearchEvent" className="fs-6">
+        <Nav.Item className={`${styles["searchNavButtonItem"]}`}>
+          <Nav.Link as={NavLink} to="/search/event" className="fs-6">
             Events <Badge bg="danger">{events ? events.length : "0"}</Badge>
             <span className="visually-hidden">unread messages</span>
           </Nav.Link>
         </Nav.Item>
-        <Nav.Item className={`${styles["searchNavBottomItem"]}`}>
-          <Nav.Link as={NavLink} to="/SearchOrganization" className="fs-6">
+        <Nav.Item className={`${styles["searchNavButtonItem"]}`}>
+          <Nav.Link as={NavLink} to="/search/organization" className="fs-6">
             Organizations <Badge bg="danger">{organizations ? organizations.length : "0"}</Badge>
             <span className="visually-hidden">unread messages</span>
           </Nav.Link>

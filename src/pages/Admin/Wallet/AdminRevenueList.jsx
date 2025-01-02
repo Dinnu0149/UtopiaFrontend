@@ -248,13 +248,13 @@ function AdminRevenueList() {
                           <td className="fw-bold">{index}.</td>
                           <td className="">
                             <Link
-                              to={`/OrganizationProfile/${revenue.event.organizer_id}`}
+                              to={`/organization/profile/${revenue.event.organizer_id}`}
                             >
                               {revenue.event.organizer}
                             </Link>
                           </td>
                           <td className="">
-                            <Link to={`/EventDetail/${revenue.event.pk}`}>
+                            <Link to={`/eventdetail/${revenue.event.pk}`}>
                               {revenue.event.event_name}
                             </Link>
                           </td>

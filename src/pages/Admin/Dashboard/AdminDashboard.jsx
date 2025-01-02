@@ -193,12 +193,12 @@ useEffect(() => {
           </Col>
         </Row>
         {recent_created_event && recent_created_event.length > 0 ? (
-          <ActiveEvent upcoming={recent_created_event} title={"Recent created"} path={'/EventsList'}/>
+          <ActiveEvent upcoming={recent_created_event} title={"Recent created"} path={'/admin/events/list'}/>
         ) : (
           <NonAvailable message={"No Recent Created Event Available"} imageSrc={upcomingIllustration}/>
         )}
         {recent_closed_event && recent_closed_event.length > 0 ? (
-          <ActiveEvent upcoming={recent_closed_event} title={"Recent closed"} path={'/EventsList'}/>
+          <ActiveEvent upcoming={recent_closed_event} title={"Recent closed"} path={'/admin/events/list'}/>
         ) : (
           <NonAvailable message={"No Recent Closed Event Available"}/>
         )}

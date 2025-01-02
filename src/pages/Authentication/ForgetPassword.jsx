@@ -30,7 +30,7 @@ function ForgetPassword() {
 
   useEffect(() => {
     if (authState.response) {
-      navigate("/ForgetPasswordComfirm");
+      navigate("/password/forget/comfirm");
     }
   }, [authState, navigate]);
 

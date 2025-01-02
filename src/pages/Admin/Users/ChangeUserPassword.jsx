@@ -33,7 +33,7 @@ function ChangeUserPassword() {
 
       useEffect(() => {
         if (authState.passwordChangeResponse) {
-          navigate("/User", {
+          navigate("/admin/user", {
             state: { message: "Password reset successful!" },
           });
         } else if (authState.passwordChangeError) {

@@ -51,7 +51,7 @@ function TransactionCard({ transactions }) {
         )}
       </Card.Body>
       <Card.Footer className="bg-white text-center">
-        <Link to={"/Transactions"} className="link-primary">
+        <Link to={"/transactions"} className="link-primary">
           View All Transactions
         </Link>
       </Card.Footer>

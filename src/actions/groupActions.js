@@ -9,9 +9,9 @@ export const getGroups = () => async (dispatch) => {
 
     dispatch(groupsSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(groupsFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(groupsFailure("An error occured while processing request, try again"));
     } else {
       dispatch(groupsFailure(error.response?.data));

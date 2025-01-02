@@ -16,9 +16,9 @@ export const getUserFavoriteItems = () => async (dispatch) => {
 
     dispatch(favoriteSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(favoriteFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(favoriteFailure("An error occured while processing request, try again"));
     } else {
       dispatch(favoriteFailure(error.response?.data));
@@ -37,9 +37,9 @@ export const updateUserFavoriteItem = (formdata) => async (dispatch) => {
 
     dispatch(updateFavoriteSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(updateFavoriteFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(updateFavoriteFailure("An error occured while processing request, try again"));
     } else {
       dispatch(updateFavoriteFailure(error.response?.data));

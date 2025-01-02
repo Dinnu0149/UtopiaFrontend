@@ -41,7 +41,7 @@ function NotificationDetail() {
 
   useEffect(() => {
     if (deleteResponse) {
-      navigate("/Notifications", {
+      navigate("/notifications", {
         state: { message: "Deleted successful!" },
       });
     } else if (deleteError) {

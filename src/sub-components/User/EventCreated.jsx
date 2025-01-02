@@ -20,7 +20,7 @@ function EventCreated({ events }) {
               >
                 <div className="d-flex align-items-center">
                   <div className="ms-3 ">
-                      <Link to={`/EventDetail/${event.pk}`} className="">
+                      <Link to={`/eventdetail/${event.pk}`} className="">
                         {event.name}
                       </Link>
                     <p className="mb-0">{convertDate(event.event_date)}</p>
@@ -38,7 +38,7 @@ function EventCreated({ events }) {
         )}
       </Card.Body>
       <Card.Footer className="bg-white text-center">
-        <Link to={"/MyEvents"} className="link-primary">
+        <Link to={"/organizer/event"} className="link-primary">
           View My Events
         </Link>
       </Card.Footer>

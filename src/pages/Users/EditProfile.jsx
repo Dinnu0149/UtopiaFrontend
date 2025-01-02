@@ -20,7 +20,7 @@ function EditProfile() {
   const dispatch = useDispatch();
   const profileState = useSelector((state) => state.profile);
 
-  const { loading, response, error, editResponse, editLoading, editError } =
+  const { loading, response, error, editResponse, editLoading, editError, deleteLoading } =
     profileState;
   const {
     username,
@@ -37,6 +37,9 @@ function EditProfile() {
   const [popupStyle, setPopupStyle] = useState({});
   const [selectedState, setSelectedState] = useState("");
   const [cities, setCities] = useState([]);
+
+  const profilePicturesName = profile_picture?.split('profile_pictures/')[1];
+  const nameResult = profilePicturesName?.split('_')[0];
 
   const [editedFormData, seteditedFormData] = useState({
     first_name: "",
@@ -75,7 +78,7 @@ function EditProfile() {
 
   useEffect(() => {
     if (editResponse) {
-      navigate("/Profile", {
+      navigate("/profile", {
         state: { message: "Profile updated successfully!" },
       });
 
@@ -145,7 +148,7 @@ function EditProfile() {
 
   return (
     <Layout
-      dataLoading={loading}
+      dataLoading={loading || deleteLoading}
     >
       <section className="mx-3">
         <PageHeader title={"Edit Profile"} />
@@ -323,6 +326,7 @@ function EditProfile() {
                           accept={"image/*"}
                           onChange={handleChange}
                         />
+                        <a href="">{nameResult}</a>
                       </Col>
                     </Row>
                     <Row>
@@ -342,7 +346,7 @@ function EditProfile() {
                       <Col>
                         <Button
                           as={NavLink}
-                          to={"/ChangePassword"}
+                          to={"/change/password"}
                           className="w-100 btn_reverse"
                         >
                           Change Password{" "}

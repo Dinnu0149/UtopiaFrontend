@@ -22,7 +22,7 @@ function Organizer({user_id}) {
     <Nav className={`${styles["nav"]} flex-column mx-2`}>
       <Nav.Link
         as={NavLink}
-        to={"/OrganizerDashboard"}
+        to={"/organizer/dashboard"}
         className={`${styles["nav-item"]} mb-2`}
       >
         <i className="fas fa-home"></i> Dashboard
@@ -35,11 +35,11 @@ function Organizer({user_id}) {
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
             isActiveParent(
-              "/Events",
-              "/CreateEvent",
-              "/EventDetail",
-              "/CreateViewReview",
-              "/MyEvents"
+              "/events",
+              "/organizer/event/create",
+              "/eventdetail",
+              "/create/viewreview/",
+              "/organizer/event"
             )
               ? "active"
               : ""
@@ -61,21 +61,21 @@ function Organizer({user_id}) {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/Events"}
+              to={"/events"}
               className={`${styles["nav-sub-item"]}`}
             >
               All Events
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/MyEvents"}
+              to={"/organizer/event"}
               className={`${styles["nav-sub-item"]}`}
             >
               My Events
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/CreateEvent"}
+              to={"/organizer/event/create"}
               className={`${styles["nav-sub-item"]}`}
             >
               Create Event
@@ -87,7 +87,7 @@ function Organizer({user_id}) {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/Wallet") ? "active" : ""
+            isActiveParent("/organizer/wallet") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("wallet")}
         >
@@ -105,21 +105,21 @@ function Organizer({user_id}) {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/Wallet"}
+              to={"/organizer/wallet"}
               className={`${styles["nav-sub-item"]}`}
             >
               My Wallet
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/Revenue"}
+              to={"/organizer/revenue"}
               className={`${styles["nav-sub-item"]}`}
             >
               Revenues
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/Transactions"}
+              to={"/transactions"}
               className={`${styles["nav-sub-item"]}`}
             >
               Transactions
@@ -131,7 +131,7 @@ function Organizer({user_id}) {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/QrScanner") ? "active" : ""
+            isActiveParent("/qrscanner") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("qrScanner")}
         >
@@ -149,7 +149,7 @@ function Organizer({user_id}) {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/QrScanner"}
+              to={"/qrscanner"}
               className={`${styles["nav-sub-item"]}`}
             >
               QrScanner
@@ -164,7 +164,7 @@ function Organizer({user_id}) {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/OrganizationProfile", "/OrganizationEdit") ? "active" : ""
+            isActiveParent("/organization/profile", "/organization/profile/edit") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("organization")}
         >
@@ -182,14 +182,14 @@ function Organizer({user_id}) {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={`/OrganizationProfile/${user_id}/`}
+              to={`/organization/profile/${user_id}/`}
               className={`${styles["nav-sub-item"]}`}
             >
               Info
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={`/OrganizationEdit/${user_id}`}
+              to={`/organization/profile/edit/${user_id}`}
               className={`${styles["nav-sub-item"]}`}
             >
               Edit Info
@@ -200,7 +200,7 @@ function Organizer({user_id}) {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/Profile", "/EditProfile") ? "active" : ""
+            isActiveParent("/profile", "/profile/edit") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("components")}
         >
@@ -218,14 +218,14 @@ function Organizer({user_id}) {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/Profile"}
+              to={"/profile"}
               className={`${styles["nav-sub-item"]}`}
             >
               My Profile
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/EditProfile"}
+              to={"/profile/edit"}
               className={`${styles["nav-sub-item"]}`}
             >
               Edit Profile
@@ -235,7 +235,7 @@ function Organizer({user_id}) {
       </div>
       <Nav.Link
         as={NavLink}
-        to={"/SearchEvent"}
+        to={"/search/event"}
         className={`${styles["nav-item"]} mb-2`}
       >
         <i className="fas fa-search"></i> Search

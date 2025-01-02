@@ -23,9 +23,9 @@ export const getTransactions = (page) => async (dispatch) => {
 
     dispatch(TransactionsSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(TransactionsFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(TransactionsFailure("An error occured while processing request, try again"));
     } else {
       dispatch(TransactionsFailure(error.response?.data));
@@ -43,9 +43,9 @@ export const deleteTransaction = (pk) => async (dispatch) => {
       dispatch(deleteTransactionsSuccess(status));
     }
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(deleteTransactionsFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(deleteTransactionsFailure("An error occured while processing request, try again"));
     } else {
       dispatch(deleteTransactionsFailure(error.response?.data));
@@ -65,9 +65,9 @@ export const admingetTransactions = (page) => async (dispatch) => {
 
     dispatch(adminTransactionsSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(adminTransactionsFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(adminTransactionsFailure("An error occured while processing request, try again"));
     } else {
       dispatch(adminTransactionsFailure(error.response?.data));

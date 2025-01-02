@@ -22,7 +22,7 @@ function Admin() {
     <Nav className={`${styles["nav"]} flex-column mx-2`}>
       <Nav.Link
         as={NavLink}
-        to={"/AdminDashboard"}
+        to={"/admin/dashboard"}
         className={`${styles["nav-item"]} mb-2`}
       >
         <i className="fas fa-home"></i> Dashboard
@@ -34,7 +34,7 @@ function Admin() {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/User") ? "active" : ""
+            isActiveParent("/admin/user") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("user")}
         >
@@ -53,7 +53,7 @@ function Admin() {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/User"}
+              to={"/admin/user"}
               className={`${styles["nav-sub-item"]}`}
             >
               Users
@@ -66,12 +66,12 @@ function Admin() {
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
             isActiveParent(
-              "/Events",
-              "/CreateEvent",
-              "/EventDetail",
-              "/CreateViewReview",
-              "/EventsList",
-              "/AdminCategory"
+              "/events",
+              "/organizer/event/create",
+              "/eventdetail",
+              "/create/viewreview/",
+              "/admin/events/list",
+              "/admin/category"
             )
               ? "active"
               : ""
@@ -93,14 +93,14 @@ function Admin() {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/Events"}
+              to={"/events"}
               className={`${styles["nav-sub-item"]}`}
             >
               Events
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/EventsList"}
+              to={"/admin/events/list"}
               className={`${styles["nav-sub-item"]}`}
             >
               All Events
@@ -108,7 +108,7 @@ function Admin() {
 
             <Nav.Link
               as={NavLink}
-              to={"/AdminCategory"}
+              to={"/admin/category"}
               className={`${styles["nav-sub-item"]}`}
             >
               Admin Categories
@@ -120,7 +120,7 @@ function Admin() {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/CreateNotification") ? "active" : ""
+            isActiveParent("/admin/create/notification") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("notification")}
         >
@@ -139,7 +139,7 @@ function Admin() {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/CreateNotification"}
+              to={"/admin/create/notification"}
               className={`${styles["nav-sub-item"]}`}
             >
               Send Notification
@@ -151,7 +151,7 @@ function Admin() {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/QrScanner") ? "active" : ""
+            isActiveParent("/qrscanner") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("qrScanner")}
         >
@@ -169,7 +169,7 @@ function Admin() {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/QrScanner"}
+              to={"/qrscanner"}
               className={`${styles["nav-sub-item"]}`}
             >
               QrScanner
@@ -184,7 +184,7 @@ function Admin() {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/Wallet") ? "active" : ""
+            isActiveParent("/organizer/wallet") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("wallet")}
         >
@@ -202,21 +202,21 @@ function Admin() {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/AdminWallet"}
+              to={"/admin/wallet"}
               className={`${styles["nav-sub-item"]}`}
             >
               App Wallet
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/AdminRevenue"}
+              to={"/admin/revenue"}
               className={`${styles["nav-sub-item"]}`}
             >
               Revenues
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/AdminTransactions"}
+              to={"/admin/transactions"}
               className={`${styles["nav-sub-item"]}`}
             >
               Transactions
@@ -227,7 +227,7 @@ function Admin() {
           className={`${
             styles[("nav-item", "dropdown")]
           } d-flex justify-content-between ${
-            isActiveParent("/Profile", "/EditProfile") ? "active" : ""
+            isActiveParent("/profile", "/profile/edit") ? "active" : ""
           }`}
           onClick={() => toggleDropdown("components")}
         >
@@ -245,14 +245,14 @@ function Admin() {
           <Nav className={`${styles["sub-menu"]} flex-column mx-5`}>
             <Nav.Link
               as={NavLink}
-              to={"/Profile"}
+              to={"/profile"}
               className={`${styles["nav-sub-item"]}`}
             >
               Profile
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/EditProfile"}
+              to={"/profile/edit"}
               className={`${styles["nav-sub-item"]}`}
             >
               Edit Profile
@@ -262,7 +262,7 @@ function Admin() {
       </div>
       <Nav.Link
         as={NavLink}
-        to={"/SearchEvent"}
+        to={"/search/event"}
         className={`${styles["nav-item"]} mb-2`}
       >
         <i className="fas fa-search"></i> Search

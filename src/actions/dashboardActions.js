@@ -13,9 +13,9 @@ export const getDashboardData = () => async (dispatch) => {
       const data = response?.data;      
       dispatch(dashboardSuccess(data));
     } catch (error) {
-      if (error.response.status === 401) {
+      if (error.response?.status === 401) {
         dispatch(dashboardFailure("Your token has expired, login is required"));
-      } else if (error.response.status === 500) {
+      } else if (error.response?.status === 500) {
         dispatch(dashboardFailure("An error occured while processing request, try again"));
       } else {
         dispatch(dashboardFailure(error.response?.data));

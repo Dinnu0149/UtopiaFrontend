@@ -37,7 +37,7 @@ function SearchOrganizationResult() {
                 <Row className="mb-3 d-flex justify-content-between align-content-between">
                   <Col
                     as={NavLink}
-                    to={`/OrganizationProfile/${organization.owner?.pk}`}
+                    to={`/organization/profile/${organization.owner?.pk}`}
                     md={8}
                     xs={7}
                     className="d-flex gap-1 align-content-center align-items-center"

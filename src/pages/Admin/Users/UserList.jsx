@@ -137,7 +137,7 @@ function UserList() {
   };
 
   const handleChangePassword = (pk) => {
-    navigate(`/ChangeUserPassword/${pk}`)
+    navigate(`admin/change/user/password/${pk}`)
   };
 
   const handleMenuSelect = (option, pk, e) => {

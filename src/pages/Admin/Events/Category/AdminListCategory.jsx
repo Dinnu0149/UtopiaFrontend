@@ -114,7 +114,7 @@ function AdminListCategory() {
           <Col>
             <Button
               as={NavLink}
-              to={"/CreateCategory"}
+              to={"/admin/category/create"}
               className="float-end me-2 px-5 btn_reverse shadow-sm"
             >
               Create

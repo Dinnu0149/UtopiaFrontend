@@ -23,9 +23,9 @@ export const getUsers = (page) => async (dispatch) => {
 
     dispatch(UsersSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(UsersFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(UsersFailure("An error occured while processing request, try again"));
     } else {
       dispatch(UsersFailure(error.response?.data));
@@ -43,9 +43,9 @@ export const deleteUser = (pk) => async (dispatch) => {
       dispatch(deleteUserSuccess(status));
     }
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(deleteUserFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(deleteUserFailure("An error occured while processing request, try again"));
     } else {
       dispatch(deleteUserFailure(error.response?.data));
@@ -61,9 +61,9 @@ export const UserStatusUpdate = (pk) => async (dispatch) => {
 
     dispatch(UserStatusSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(UserStatusFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(UserStatusFailure("An error occured while processing request, try again"));
     } else {
       dispatch(UserStatusFailure(error.response?.data));

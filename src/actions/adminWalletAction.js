@@ -19,9 +19,9 @@ export const getAdminWallet = () => async (dispatch) => {
 
     dispatch(walletSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(walletFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(walletFailure("An error occured while processing request, try again"));
     } else {
       dispatch(walletFailure(error.response?.data));
@@ -41,9 +41,9 @@ export const getAdminRevenues = (page) => async (dispatch) => {
 
     dispatch(AdminRevenuesSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(AdminRevenuesFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(AdminRevenuesFailure("An error occured while processing request, try again"));
     } else {
       dispatch(AdminRevenuesFailure(error.response?.data));
@@ -61,9 +61,9 @@ export const processRevenueWithdrawal = (pk) => async (dispatch) => {
 
     dispatch(RevenueWithdrawalSuccess(data));
   } catch (error) {
-    if (error.response.status === 401) {
+    if (error.response?.status === 401) {
       dispatch(RevenueWithdrawalFailure("Your token has expired, login is required"));
-    } else if (error.response.status === 500) {
+    } else if (error.response?.status === 500) {
       dispatch(RevenueWithdrawalFailure("An error occured while processing request, try again"));
     } else {
       dispatch(RevenueWithdrawalFailure(error.response?.data));

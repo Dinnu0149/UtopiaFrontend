@@ -15,7 +15,7 @@ function EditEventNavigation() {
         <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
           <Nav.Link
             as={NavLink}
-            to={`/EventInfoEdit/${pk}`}>
+            to={`/organizer/event/info/edit/${pk}`}>
             Event Info
           </Nav.Link>
         </Nav.Item>
@@ -23,21 +23,21 @@ function EditEventNavigation() {
         <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
           <Nav.Link
             as={NavLink}
-            to={`/SchduleEdit/${pk}`}>
+            to={`/organizer/event/schdule/edit/${pk}`}>
             Schdule
           </Nav.Link>
         </Nav.Item>
         <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
           <Nav.Link
             as={NavLink}
-            to={`/SpeakerEdit/${pk}`}>
+            to={`/organizer/event/speaker/edit/${pk}`}>
             Speaker
           </Nav.Link>
         </Nav.Item>
         <Nav.Item className={`${styles["profileNavBottomItem"]}`}>
           <Nav.Link
             as={NavLink}
-            to={`/TicketEdit/${pk}`}>
+            to={`/organizer/event/ticket/edit/${pk}`}>
             Ticket
           </Nav.Link>
         </Nav.Item>

@@ -225,7 +225,7 @@ function CreateEventSchdule() {
                       </Col>
 
                       <Col>
-                      <Button className="w-100 btn_reverse" as={NavLink} to={`/${event_id}/CreateEventTicket`}> Next </Button>
+                      <Button className="w-100 btn_reverse" as={NavLink} to={`/organizer/event/${event_id}/create/ticket`}> Next </Button>
                       </Col>
                     </Row>
                   </Form>

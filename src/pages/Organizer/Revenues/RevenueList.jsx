@@ -196,7 +196,7 @@ function RevenueList() {
                         <tr key={revenue.pk}>
                           <td className="fw-bold">{index}.</td>
                           <td className="">
-                            <Link to={`/EventDetail/${revenue.event.pk}`}>
+                            <Link to={`/eventdetail/${revenue.event.pk}`}>
                               {revenue.event.event_name}
                             </Link>
                           </td>

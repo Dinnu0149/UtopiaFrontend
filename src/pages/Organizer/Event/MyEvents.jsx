@@ -115,7 +115,7 @@ function MyEvents() {
   }, [activationResponse, activationError]);
 
   const handleEventEdit = (pk) => {
-    navigate(`/EventInfoEdit/${pk}`);
+    navigate(`/organizer/event/info/edit/${pk}`);
   };
 
   const handleEventDelete = (pk) => {
@@ -308,7 +308,7 @@ function MyEvents() {
                         <tr key={event.pk}>
                           <td className="fw-bold">{index}.</td>
                           <td className="">
-                            <Link to={`/EventDetail/${event.pk}`}>
+                            <Link to={`/eventdetail/${event.pk}`}>
                               {event.name}
                             </Link>
                           </td>

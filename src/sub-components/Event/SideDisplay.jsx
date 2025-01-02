@@ -35,7 +35,7 @@ function SideDisplay() {
           {hot_events && hot_events.length > 0 ? (
             hot_events.map((event) => (
               <Carousel.Item key={event.pk}>
-                <Link to={`/EventDetail/${event.pk}`}>
+                <Link to={`/eventdetail/${event.pk}`}>
                   <Image
                     src={event.image}
                     alt="Event-img"
@@ -73,7 +73,7 @@ function SideDisplay() {
               <Col
                 key={organization.pk}
                 as={NavLink}
-                to={`/OrganizationProfile/${organization.owner_id?.id}`}
+                to={`/organization/profile/${organization.owner_id?.id}`}
                 lg={12}
                 className="d-flex gap-1 align-content-center align-items-center mb-2"
               >

@@ -136,7 +136,7 @@ function Notifications() {
                   <Card className="rounded rounded-4 border-0 shadow">
                     <Card.Body
                       as={NavLink}
-                      to={`/Notification/${notification.pk}`}
+                      to={`/notification/${notification.pk}`}
                     >
                       <Row>
                         <Col>

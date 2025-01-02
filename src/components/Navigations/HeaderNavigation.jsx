@@ -40,11 +40,11 @@ function HeaderNavigation({ toggleSidebar, isOpen }) {
   useEffect(() => {
     if (!loading && formData?.keyword === "") {
     } else if (
-      location.pathname === "/SearchEvent" ||
-      location.pathname === "/SearchOrganization"
+      location.pathname === "/search/event" ||
+      location.pathname === "/search/organization"
     ) {
     } else {
-      navigate("/SearchEvent");
+      navigate("/search/event");
     }
   }, [navigate, loading]);
 
@@ -63,7 +63,7 @@ function HeaderNavigation({ toggleSidebar, isOpen }) {
 
   const handleLogout = () => {
     dispatch(logoutOpreation());
-    navigate("/Login", {
+    navigate("/login", {
       state: { message: "Logout successful!" },
     });
     dispatch(saveRedirectPath(null, false));
@@ -100,7 +100,6 @@ function HeaderNavigation({ toggleSidebar, isOpen }) {
       expand="lg"
     >
       <Navbar.Brand
-        href="#"
         className={styles["menu-icon"]}
         onClick={toggleSidebar}
       >

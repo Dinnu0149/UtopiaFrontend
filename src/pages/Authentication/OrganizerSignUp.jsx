@@ -34,7 +34,7 @@ function OrganizerSignUp() {
     const handleComfirmationPopUps = (messageInfo, messageBgColor) => {
       setMessage({ text: messageInfo, color: messageBgColor });
       setComfirmationAction(true);
-      setTimeout(() => setComfirmationAction(false), 4000);
+      setTimeout(() => setComfirmationAction(false), 5000);
     };
 
     const handleSignUpSubmit = (e) => {
@@ -135,11 +135,11 @@ function OrganizerSignUp() {
                     type="checkbox"
                     required
                   />
-                  <Form.Label>Agree to <Link>terms and conditions</Link> </Form.Label>
+                  <Form.Label>Agree to <Link to={'/policy'}>terms and conditions</Link> </Form.Label>
                 </Form.Group>
 
                 <div className="d-flex justify-content-end mt-3">
-                  <Link to={"/ForgetPassword"}>Forgot your password?</Link>
+                  <Link to={"/password/forget"}>Forgot your password?</Link>
                 </div>
 
                 <Button variant="primary" type="submit" className="w-100 mt-3 rounded-pill py-2">
@@ -159,11 +159,11 @@ function OrganizerSignUp() {
                 <div className=" mt-3 mb-5">           
                   <p className=" m-0 text-center">
                     Already have an account?
-                    <Link to={"/Login"} className="ms-2">SignIn</Link>
+                    <Link to={"/login"} className="ms-2">SignIn</Link>
                   </p>
                   <p className=" m-0 text-center">
                     Become a event explorer?
-                    <Link to={"/SignUp"} className="ms-2">SignUp</Link>
+                    <Link to={"/signup"} className="ms-2">SignUp</Link>
                   </p>                 
                 </div>
               </div>

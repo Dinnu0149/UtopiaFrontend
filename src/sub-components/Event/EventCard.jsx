@@ -18,7 +18,7 @@ function EventCard({ event, handleRemovePop }) {
     <Card className={`p-3 shadow-sm ${styles["event-card"]}`}>
       <Row>
         <Col lg={2} xs={2} md={2} sm={2} className="m-0 p-0">
-          <Link to={`/OrganizationProfile/${event.created_by?.id}`}>
+          <Link to={`/organization/profile/${event.created_by?.id}`}>
             <Image
               roundedCircle
               className={`${styles["organizerImg"]} `}
@@ -30,7 +30,7 @@ function EventCard({ event, handleRemovePop }) {
         <Col lg={10} xs={10} md={10} sm={10} className="m-0 p-0">
           <Card.Title
             as={NavLink}
-            to={`/OrganizationProfile/${event.created_by?.id}`}
+            to={`/organization/profile/${event.created_by?.id}`}
             className={` ${styles["eventTitle"]} p-0 m-0 fw-bold`}
           >
             {event.organization?.organization_name}

@@ -45,7 +45,7 @@ function HeaderCardBg({
               {UserAllowed(["organizer"]) ? (
                 <Button
                   as={NavLink}
-                  to={"/CreateEvent"}
+                  to={"/organizer/event/create"}
                   className="btn_reverse bg-light text-primary px-5 d-none d-sm-block"
                 >
                   Create Event
