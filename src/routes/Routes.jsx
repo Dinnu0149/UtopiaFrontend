@@ -64,6 +64,7 @@ import SearchEventResult from "../pages/Users/Search/SearchEventResult";
 import SearchOrganizationResult from "../pages/Users/Search/SearchOrganizationResult";
 import TermsCondition from "../pages/Policy&HelpCenter/TermsCondition";
 import HelpCenter from "../pages/Policy&HelpCenter/HelpCenter";
+// "homepage": "https://dinnu0149.github.io/utopia",
 
 
 function NavigationControl() {
